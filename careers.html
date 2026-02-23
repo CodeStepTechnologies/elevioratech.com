@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- FAVICON -->
+
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+<link rel="shortcut icon" href="assets/images/favicon.png">
+
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<title>Careers | Elevioratech</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ULTRA PREMIUM APPLE GLASS HEADER -->
+
+<header class="ultra-header">
+
+<div class="ultra-header-inner">
+
+
+<!-- LEFT: LOGO + NAME -->
+
+<div class="ultra-brand">
+
+<img src="assets/images/eleviora-logo.png"
+class="ultra-logo">
+
+<div class="ultra-brand-text">
+
+<div class="ultra-brand-title">
+ELEVIORA TECH
+</div>
+
+<div class="ultra-brand-sub">
+INNOVATIONS
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT: NAVIGATION -->
+
+<nav class="ultra-nav">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="portfolio.html">Portfolio</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+</div>
+
+</header>
+
+
+<section style="padding:140px 40px; text-align:center;">
+
+<h1>Careers</h1>
+
+<br>
+
+<p>
+
+We are not hiring currently.
+
+</p>
+
+<p>
+
+Please check back later.
+
+</p>
+
+</section>
+
+<script src="assets/js/main.js"></script>
+  
+<script src="assets/js/particles.js"></script>
+
+  <script>
+
+/* HEADER SHRINK ON SCROLL */
+
+window.addEventListener("scroll", function(){
+
+const header =
+document.querySelector(".ultra-header");
+
+if(window.scrollY > 40){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+
+/* ACTIVE PAGE HIGHLIGHT */
+
+const links =
+document.querySelectorAll(".ultra-nav a");
+
+links.forEach(link => {
+
+if(link.href === window.location.href){
+
+link.classList.add("active");
+
+}
+
+});
+
+</script>
+  <script>
+
+const canvas = document.getElementById("premiumDots");
+
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+
+canvas.width = 420;
+
+
+/* DOT SETTINGS */
+
+const dots = [];
+
+const dotCount = 28;
+
+
+/* CREATE DOTS */
+
+for(let i=0;i<dotCount;i++){
+
+dots.push({
+
+x: Math.random() * canvas.width,
+
+y: Math.random() * canvas.height,
+
+vx: (Math.random()-0.5)*0.4,
+
+vy: (Math.random()-0.5)*0.4
+
+});
+
+}
+
+
+/* SCROLL OFFSET */
+
+let scrollOffset = 0;
+
+window.addEventListener("scroll", () => {
+
+scrollOffset = window.scrollY * 0.15;
+
+});
+
+
+/* DRAW */
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+
+/* DRAW LINES */
+
+for(let i=0;i<dots.length;i++){
+
+for(let j=i+1;j<dots.length;j++){
+
+let dx = dots[i].x - dots[j].x;
+
+let dy = dots[i].y - dots[j].y;
+
+let dist = Math.sqrt(dx*dx+dy*dy);
+
+if(dist < 140){
+
+ctx.strokeStyle =
+"rgba(37,99,235,"+(1-dist/140)*0.4+")";
+
+ctx.lineWidth = 1;
+
+ctx.beginPath();
+
+ctx.moveTo(dots[i].x, dots[i].y + scrollOffset);
+
+ctx.lineTo(dots[j].x, dots[j].y + scrollOffset);
+
+ctx.stroke();
+
+}
+
+}
+
+}
+
+
+/* DRAW DOTS */
+
+dots.forEach(dot=>{
+
+ctx.beginPath();
+
+ctx.arc(dot.x, dot.y + scrollOffset, 2, 0, Math.PI*2);
+
+ctx.fillStyle = "#2563eb";
+
+ctx.fill();
+
+
+/* MOVE */
+
+dot.x += dot.vx;
+
+dot.y += dot.vy;
+
+
+/* BOUNDS */
+
+if(dot.x < 0 || dot.x > canvas.width)
+
+dot.vx *= -1;
+
+if(dot.y < 0 || dot.y > canvas.height)
+
+dot.vy *= -1;
+
+});
+
+
+requestAnimationFrame(draw);
+
+}
+
+
+/* START */
+
+draw();
+
+
+/* RESIZE */
+
+window.addEventListener("resize", ()=>{
+
+canvas.height = window.innerHeight;
+
+});
+
+</script>
+</body>
+
+<!-- PREMIUM CONNECTING DOTS BACKGROUND -->
+
+<canvas id="premiumDots"></canvas>
+
+</html>

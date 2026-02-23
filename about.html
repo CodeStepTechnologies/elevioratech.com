@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!-- FAVICON -->
+
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+<link rel="shortcut icon" href="assets/images/favicon.png">
+
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
+   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Elevioratech Innovations LLP</title>
+
+<meta name="description" content="Elevioratech Innovations LLP is a global technology innovation company building scalable digital platforms across industries.">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =============================
+   FUTURISTIC BACKGROUND
+============================= */
+
+.about-bg{
+
+position:fixed;
+width:100%;
+height:100%;
+z-index:-5;
+
+background:
+radial-gradient(circle at 10% 20%, rgba(37,99,235,0.14), transparent),
+radial-gradient(circle at 90% 80%, rgba(6,182,212,0.14), transparent),
+radial-gradient(circle at 50% 50%, rgba(59,130,246,0.08), transparent);
+
+}
+
+
+.glow{
+
+position:fixed;
+width:400px;
+height:400px;
+border-radius:50%;
+background:radial-gradient(circle, rgba(37,99,235,0.25), transparent);
+filter:blur(100px);
+z-index:-4;
+animation:floatGlow 12s infinite alternate ease-in-out;
+
+}
+
+.glow1{ top:10%; left:10%; }
+.glow2{ bottom:10%; right:10%; animation-delay:4s; }
+
+@keyframes floatGlow{
+from{ transform:translateY(0px);}
+to{ transform:translateY(-80px);}
+}
+
+
+/* HERO */
+
+.about-hero{
+
+padding-top:160px;
+padding-bottom:100px;
+text-align:center;
+
+}
+
+.about-title{
+
+font-size:72px;
+font-weight:900;
+
+background:linear-gradient(90deg,#2563eb,#06b6d4);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+.about-subtitle{
+
+margin-top:24px;
+font-size:22px;
+color:var(--text-soft);
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
+
+}
+
+
+/* SECTION */
+
+.section{
+
+padding-top:100px;
+padding-bottom:100px;
+
+}
+
+.section-header{
+
+text-align:center;
+max-width:900px;
+margin:auto;
+margin-bottom:60px;
+
+}
+
+.section-header h2{
+
+font-size:44px;
+
+}
+
+.section-header p{
+
+margin-top:20px;
+font-size:20px;
+color:var(--text-soft);
+
+}
+
+
+/* LEADERSHIP GRID */
+
+.leadership-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:60px;
+
+}
+
+
+.leader-card{
+
+background:white;
+padding:40px;
+border-radius:20px;
+border:1px solid var(--border);
+box-shadow:0 30px 80px rgba(0,0,0,0.08);
+transition:0.4s;
+
+}
+
+.leader-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 50px 120px rgba(37,99,235,0.15);
+
+}
+
+.leader-name{
+
+font-size:28px;
+font-weight:800;
+
+}
+
+.leader-role{
+
+color:#2563eb;
+font-weight:600;
+margin-top:4px;
+
+}
+
+.leader-desc{
+
+margin-top:16px;
+color:var(--text-soft);
+line-height:1.7;
+
+}
+
+.linkedin-btn{
+
+display:inline-block;
+margin-top:20px;
+
+padding:12px 24px;
+
+background:linear-gradient(90deg,#0077b5,#00a0dc);
+
+color:white;
+text-decoration:none;
+
+border-radius:10px;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.linkedin-btn:hover{
+
+transform:translateY(-2px);
+box-shadow:0 20px 40px rgba(0,119,181,0.3);
+
+}
+
+
+/* PRODUCTS GRID */
+
+.products-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:60px;
+
+}
+
+.product-card{
+
+background:white;
+padding:30px;
+border-radius:16px;
+border:1px solid var(--border);
+transition:0.4s;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 40px 80px rgba(37,99,235,0.12);
+
+}
+
+
+/* FUTURE SECTION */
+
+.future-section{
+
+text-align:center;
+max-width:900px;
+margin:auto;
+
+}
+
+.future-section p{
+
+margin-top:20px;
+font-size:20px;
+color:var(--text-soft);
+line-height:1.7;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.leadership-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-title{
+
+font-size:44px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="about-bg"></div>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+
+<!-- ULTRA PREMIUM APPLE GLASS HEADER -->
+
+<header class="ultra-header">
+
+<div class="ultra-header-inner">
+
+
+<!-- LEFT: LOGO + NAME -->
+
+<div class="ultra-brand">
+
+<img src="assets/images/eleviora-logo.png"
+class="ultra-logo">
+
+<div class="ultra-brand-text">
+
+<div class="ultra-brand-title">
+ELEVIORA TECH
+</div>
+
+<div class="ultra-brand-sub">
+INNOVATIONS
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT: NAVIGATION -->
+
+<nav class="ultra-nav">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="portfolio.html">Portfolio</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+<div class="container">
+
+<h1 class="about-title">
+
+About Elevioratech
+
+</h1>
+
+<p class="about-subtitle">
+
+Elevioratech Innovations LLP is a global technology innovation company focused on building scalable digital platforms across industries including food delivery, enterprise software, and global travel services. Our mission is to create technology platforms that drive digital transformation and deliver meaningful impact worldwide.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- COMPANY OVERVIEW -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<h2>Company Overview</h2>
+
+<p>
+
+Elevioratech Innovations LLP develops and operates modern digital platforms designed for global scale. Our platforms combine advanced engineering, scalable infrastructure, and modern user experience design to create reliable, high-performance solutions.
+
+We focus on building platforms that solve real-world problems and enable businesses and consumers to operate more efficiently in the digital world.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<h2>Our Platforms and Products</h2>
+
+<p>
+
+Elevioratech builds and operates multiple technology platforms designed for global markets.
+
+</p>
+
+</div>
+
+
+<div class="products-grid">
+
+<div class="product-card">
+
+<h3>TASTR</h3>
+
+<p>
+
+Next-generation food delivery platform launching in India and United Kingdom, designed for speed, scalability, and superior user experience.
+
+</p>
+
+</div>
+
+
+<div class="product-card">
+
+<h3>CodeStep Technologies</h3>
+
+<p>
+
+Enterprise software and digital solutions provider delivering applications, systems, and technology infrastructure.
+
+</p>
+
+</div>
+
+
+<div class="product-card">
+
+<h3>Vayuara Holidays</h3>
+
+<p>
+
+Global travel platform focused on delivering seamless holiday booking and travel experiences.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- LEADERSHIP -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<h2>Leadership</h2>
+
+</div>
+
+
+<div class="leadership-grid">
+
+
+<div class="leader-card">
+
+<div class="leader-name">
+Chethan K R
+</div>
+
+<div class="leader-role">
+Founder
+</div>
+
+<p class="leader-desc">
+
+Chethan K R founded Elevioratech Innovations LLP with the vision of building global-scale technology platforms that deliver meaningful impact. His focus is on innovation, scalable architecture, and long-term technology growth.
+
+</p>
+
+<a href="https://www.linkedin.com/in/chethan-k-r-reddy" target="_blank" class="linkedin-btn">
+
+View LinkedIn Profile
+
+</a>
+
+</div>
+
+
+
+<div class="leader-card">
+
+<div class="leader-name">
+Tarun K R Reddy
+</div>
+
+<div class="leader-role">
+Managing Partner
+</div>
+
+<p class="leader-desc">
+
+Tarun K R Reddy leads strategic growth and execution at Elevioratech, ensuring reliable platform development and scalable business expansion across global markets.
+
+</p>
+
+<a href="https://www.linkedin.com/in/drtarunkrr" target="_blank" class="linkedin-btn">
+
+View LinkedIn Profile
+
+</a>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- FUTURE -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="future-section">
+
+<h2>Future Expansion and Vision</h2>
+
+<p>
+
+Elevioratech Innovations LLP is focused on expanding its technology platforms globally. Our future roadmap includes expansion into new markets, development of new digital platforms, and continuous investment in modern technology infrastructure.
+
+We are committed to building technology solutions that serve global audiences and create long-term value.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Elevioratech Innovations LLP
+
+</div>
+
+</footer>
+
+
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/main.js"></script>
+
+  <!-- =============================
+     ULTRA PREMIUM WHATSAPP CHAT
+============================== -->
+
+<style>
+
+.wa-widget{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+z-index:9999;
+
+font-family:Inter,system-ui;
+
+}
+
+
+/* FLOAT BUTTON */
+
+.wa-float{
+
+width:64px;
+height:64px;
+
+border-radius:20px;
+
+background:linear-gradient(
+135deg,
+#25D366,
+#128C7E
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+box-shadow:0 10px 40px rgba(37,211,102,0.4);
+
+transition:0.3s;
+
+}
+
+.wa-float:hover{
+
+transform:scale(1.1);
+
+}
+
+
+/* CHAT BOX */
+
+.wa-chat-box{
+
+width:340px;
+
+height:480px;
+
+background:rgba(255,255,255,0.75);
+
+backdrop-filter:blur(20px);
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.2);
+
+display:none;
+
+flex-direction:column;
+
+overflow:hidden;
+
+margin-bottom:15px;
+
+}
+
+
+/* HEADER */
+
+.wa-header{
+
+background:linear-gradient(
+135deg,
+#25D366,
+#128C7E
+);
+
+color:white;
+
+padding:14px;
+
+display:flex;
+
+align-items:center;
+
+font-weight:600;
+
+}
+
+.wa-close{
+
+margin-left:auto;
+
+cursor:pointer;
+
+font-size:20px;
+
+}
+
+
+/* BODY */
+
+.wa-body{
+
+flex:1;
+
+padding:14px;
+
+overflow:auto;
+
+background:#f8fafc;
+
+}
+
+.wa-msg{
+
+background:white;
+
+padding:10px;
+
+border-radius:10px;
+
+margin-bottom:10px;
+
+display:inline-block;
+
+}
+
+
+/* PROMPTS */
+
+.wa-prompt{
+
+background:#e2e8f0;
+
+padding:10px;
+
+border-radius:10px;
+
+margin-bottom:8px;
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+.wa-prompt:hover{
+
+background:#cbd5e1;
+
+}
+
+
+/* FOOTER */
+
+.wa-footer{
+
+display:flex;
+
+border-top:1px solid #ddd;
+
+}
+
+.wa-footer input{
+
+flex:1;
+
+padding:12px;
+
+border:none;
+
+outline:none;
+
+}
+
+.wa-footer button{
+
+background:#25D366;
+
+color:white;
+
+border:none;
+
+padding:12px 16px;
+
+cursor:pointer;
+
+}
+
+</style>
+
+
+
+<div class="wa-widget">
+
+<div class="wa-chat-box" id="waBox">
+
+<div class="wa-header">
+
+Elevioratech Support
+
+<div class="wa-close" onclick="waToggle()">×</div>
+
+</div>
+
+
+<div class="wa-body">
+
+<div class="wa-msg">
+Hello 👋 How can we help you?
+</div>
+
+<div class="wa-prompt"
+onclick="waSet('Hello, I want to know about Elevioratech.')">
+About Elevioratech
+</div>
+
+<div class="wa-prompt"
+onclick="waSet('Hello, I want to know about TASTR.')">
+TASTR Platform
+</div>
+
+<div class="wa-prompt"
+onclick="waSet('Hello, I need software services.')">
+Software Services
+</div>
+
+<div class="wa-prompt"
+onclick="waSet('Hello, I want to book holidays.')">
+Holiday Booking
+</div>
+
+</div>
+
+
+<div class="wa-footer">
+
+<input id="waInput"
+placeholder="Type a message"
+onkeypress="waEnter(event)">
+
+<button onclick="waSend()">Send</button>
+
+</div>
+
+</div>
+
+
+
+<div class="wa-float" onclick="waToggle()">
+
+<svg viewBox="0 0 32 32" width="30">
+
+<path fill="white"
+d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.5 2.1 7.9L.5 31.5l7.8-2.1c2.3 1.2 4.9 1.8 7.7 1.8 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5z"/>
+
+</svg>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* CHANGE NUMBER HERE ONLY */
+
+var waNumber = "919964488440";
+
+
+function waToggle(){
+
+var box =
+document.getElementById("waBox");
+
+box.style.display =
+box.style.display === "flex"
+? "none"
+: "flex";
+
+}
+
+
+function waSet(text){
+
+document.getElementById("waInput").value = text;
+
+}
+
+
+function waEnter(e){
+
+if(e.key === "Enter"){
+
+waSend();
+
+}
+
+}
+
+
+function waSend(){
+
+var msg =
+document.getElementById("waInput").value;
+
+if(!msg) return;
+
+var url =
+"https://wa.me/" +
+waNumber +
+"?text=" +
+encodeURIComponent(msg);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+   
+   <script>
+
+/* HEADER SHRINK ON SCROLL */
+
+window.addEventListener("scroll", function(){
+
+const header =
+document.querySelector(".ultra-header");
+
+if(window.scrollY > 40){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+
+/* ACTIVE PAGE HIGHLIGHT */
+
+const links =
+document.querySelectorAll(".ultra-nav a");
+
+links.forEach(link => {
+
+if(link.href === window.location.href){
+
+link.classList.add("active");
+
+}
+
+});
+
+</script>
+   
+   <script>
+
+const canvas = document.getElementById("premiumDots");
+
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+
+canvas.width = 420;
+
+
+/* DOT SETTINGS */
+
+const dots = [];
+
+const dotCount = 28;
+
+
+/* CREATE DOTS */
+
+for(let i=0;i<dotCount;i++){
+
+dots.push({
+
+x: Math.random() * canvas.width,
+
+y: Math.random() * canvas.height,
+
+vx: (Math.random()-0.5)*0.4,
+
+vy: (Math.random()-0.5)*0.4
+
+});
+
+}
+
+
+/* SCROLL OFFSET */
+
+let scrollOffset = 0;
+
+window.addEventListener("scroll", () => {
+
+scrollOffset = window.scrollY * 0.15;
+
+});
+
+
+/* DRAW */
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+
+/* DRAW LINES */
+
+for(let i=0;i<dots.length;i++){
+
+for(let j=i+1;j<dots.length;j++){
+
+let dx = dots[i].x - dots[j].x;
+
+let dy = dots[i].y - dots[j].y;
+
+let dist = Math.sqrt(dx*dx+dy*dy);
+
+if(dist < 140){
+
+ctx.strokeStyle =
+"rgba(37,99,235,"+(1-dist/140)*0.4+")";
+
+ctx.lineWidth = 1;
+
+ctx.beginPath();
+
+ctx.moveTo(dots[i].x, dots[i].y + scrollOffset);
+
+ctx.lineTo(dots[j].x, dots[j].y + scrollOffset);
+
+ctx.stroke();
+
+}
+
+}
+
+}
+
+
+/* DRAW DOTS */
+
+dots.forEach(dot=>{
+
+ctx.beginPath();
+
+ctx.arc(dot.x, dot.y + scrollOffset, 2, 0, Math.PI*2);
+
+ctx.fillStyle = "#2563eb";
+
+ctx.fill();
+
+
+/* MOVE */
+
+dot.x += dot.vx;
+
+dot.y += dot.vy;
+
+
+/* BOUNDS */
+
+if(dot.x < 0 || dot.x > canvas.width)
+
+dot.vx *= -1;
+
+if(dot.y < 0 || dot.y > canvas.height)
+
+dot.vy *= -1;
+
+});
+
+
+requestAnimationFrame(draw);
+
+}
+
+
+/* START */
+
+draw();
+
+
+/* RESIZE */
+
+window.addEventListener("resize", ()=>{
+
+canvas.height = window.innerHeight;
+
+});
+
+</script>
+
+</body>
+   
+   <!-- PREMIUM CONNECTING DOTS BACKGROUND -->
+
+<canvas id="premiumDots"></canvas>
+
+</html>
