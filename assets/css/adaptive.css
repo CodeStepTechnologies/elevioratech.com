@@ -1,0 +1,342 @@
+/* =========================================================
+   ELEVIORA ELITE UNIFIED ADAPTIVE SYSTEM
+   Master Responsive Framework
+   Supports: 320px → 8K Displays
+========================================================= */
+
+
+/* =========================================================
+   CORE FLUID SYSTEM
+========================================================= */
+
+:root{
+
+--fluid-min-width:320;
+--fluid-max-width:1920;
+
+--fluid-screen:100vw;
+
+--fluid-bp:calc(
+(var(--fluid-screen) - var(--fluid-min-width)*1px) /
+(var(--fluid-max-width) - var(--fluid-min-width))
+);
+
+}
+
+
+/* =========================================================
+   FLUID TYPOGRAPHY
+========================================================= */
+
+.hero-title,
+.hero h1{
+
+font-size:clamp(28px, 4vw, 64px);
+
+}
+
+.section-header h2{
+
+font-size:clamp(22px, 3vw, 40px);
+
+}
+
+.section-header p{
+
+font-size:clamp(14px, 1.4vw, 18px);
+
+}
+
+.hero-description{
+
+font-size:clamp(14px, 1.5vw, 18px);
+
+}
+
+.glass-card p{
+
+font-size:clamp(14px, 1.4vw, 17px);
+
+}
+
+
+/* =========================================================
+   FLUID SPACING
+========================================================= */
+
+.section{
+
+padding-top:clamp(60px, 8vw, 120px);
+padding-bottom:clamp(60px, 8vw, 120px);
+
+}
+
+.container{
+
+padding-left:clamp(16px, 3vw, 40px);
+padding-right:clamp(16px, 3vw, 40px);
+
+max-width:clamp(320px, 90vw, 1400px);
+
+}
+
+
+/* =========================================================
+   HEADER FLUID SYSTEM
+========================================================= */
+
+.ultra-header{
+
+width:clamp(92%, 90vw, 1200px);
+
+padding:
+
+clamp(8px, 1vw, 14px)
+
+clamp(14px, 2vw, 24px);
+
+}
+
+.ultra-logo{
+
+height:clamp(26px, 3vw, 40px);
+
+}
+
+.ultra-nav{
+
+gap:clamp(14px, 3vw, 32px);
+
+}
+
+
+/* =========================================================
+   GRID AUTO RESPONSIVE
+========================================================= */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(
+
+clamp(260px, 30vw, 360px),
+
+1fr
+
+)
+
+);
+
+gap:clamp(16px, 2vw, 32px);
+
+}
+
+
+/* =========================================================
+   HERO LOGO SCALING
+========================================================= */
+
+.tastr-hero-logo,
+.codestep-hero-logo{
+
+width:clamp(160px, 30vw, 380px);
+
+}
+
+
+/* =========================================================
+   BUTTON SCALING
+========================================================= */
+
+.btn{
+
+padding:
+
+clamp(10px, 1.4vw, 14px)
+
+clamp(18px, 2vw, 26px);
+
+font-size:clamp(14px, 1.4vw, 16px);
+
+}
+
+
+/* =========================================================
+   GLASS CARD SCALING
+========================================================= */
+
+.glass-card{
+
+padding:
+
+clamp(18px, 2vw, 32px);
+
+border-radius:
+
+clamp(14px, 1.5vw, 20px);
+
+}
+
+
+/* =========================================================
+   BRAND LOGO SCALING
+========================================================= */
+
+.brand-logo{
+
+height:clamp(40px, 5vw, 80px);
+
+}
+
+
+/* =========================================================
+   FLOWCHART AUTO ADAPT
+========================================================= */
+
+.flow-row{
+
+flex-wrap:wrap;
+
+gap:clamp(10px, 1.5vw, 30px);
+
+}
+
+.flow-box{
+
+padding:
+
+clamp(10px, 1.2vw, 18px)
+
+clamp(16px, 2vw, 28px);
+
+font-size:clamp(13px, 1.3vw, 16px);
+
+}
+
+
+/* =========================================================
+   FOOTER SYSTEM
+========================================================= */
+
+.footer-grid{
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(
+
+clamp(180px, 20vw, 240px),
+
+1fr
+
+)
+
+);
+
+gap:clamp(20px, 3vw, 40px);
+
+}
+
+
+/* =========================================================
+   WHATSAPP WIDGET SCALING
+========================================================= */
+
+#eleviora-whatsapp{
+
+bottom:clamp(16px, 2vw, 24px);
+right:clamp(16px, 2vw, 24px);
+
+}
+
+.wa-chat{
+
+width:clamp(260px, 30vw, 340px);
+
+}
+
+
+/* =========================================================
+   ULTRAWIDE SUPPORT (2K, 4K, 8K)
+========================================================= */
+
+@media (min-width:1920px){
+
+.container{
+
+max-width:1600px;
+
+}
+
+.hero-title{
+
+font-size:72px;
+
+}
+
+.section{
+
+padding-top:140px;
+padding-bottom:140px;
+
+}
+
+}
+
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width:768px){
+
+.ultra-nav{
+
+font-size:14px;
+
+}
+
+.hero-title{
+
+line-height:1.2;
+
+}
+
+.flow-row{
+
+flex-direction:column;
+
+}
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width:480px){
+
+.ultra-header{
+
+top:10px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
