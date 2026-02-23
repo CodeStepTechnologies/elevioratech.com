@@ -2,475 +2,190 @@
 <html lang="en">
 
 <head>
-   <!-- FAVICON -->
 
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-<link rel="shortcut icon" href="assets/images/favicon.png">
-
-<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TN11T6PBE5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TN11T6PBE5');
+</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vayuara Holidays | Elevioratech Innovations LLP</title>
+<title>Vayuara Holidays | Global Travel Platform</title>
 
-<meta name="description" content="Vayuara Holidays is a global holiday and travel platform offering complete travel experiences, holidays, flights, hotels, visa, and travel services.">
+<meta name="description"
+content="Vayuara Holidays is a global travel platform offering flights, hotels, visa, forex, insurance, and holiday packages worldwide.">
 
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon"
+href="../assets/images/favicon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-
-/* =============================
-   FUTURISTIC TRAVEL BACKGROUND
-============================= */
-
-.travel-bg{
-
-position:fixed;
-width:100%;
-height:100%;
-z-index:-3;
-
-background:
-
-radial-gradient(circle at 20% 30%, rgba(59,130,246,0.14), transparent),
-radial-gradient(circle at 80% 70%, rgba(6,182,212,0.14), transparent),
-radial-gradient(circle at 50% 90%, rgba(37,99,235,0.10), transparent);
-
-}
-
-
-/* =============================
-   HERO SECTION
-============================= */
-
-.brand-hero{
-
-padding-top:140px;
-padding-bottom:100px;
-
-}
-
-
-.brand-hero-inner{
-
-display:grid;
-
-grid-template-columns: 1fr 560px;
-
-align-items:center;
-
-gap:60px;
-
-min-height:75vh;
-
-}
-
-
-/* LEFT CONTENT */
-
-.brand-title{
-
-font-size:64px;
-
-font-weight:900;
-
-letter-spacing:-1px;
-
-line-height:1.1;
-
-background:linear-gradient(90deg,#2563eb,#06b6d4);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-
-.brand-description{
-
-margin-top:24px;
-
-font-size:20px;
-
-color:var(--text-soft);
-
-line-height:1.7;
-
-max-width:600px;
-
-}
-
-
-.brand-buttons{
-
-margin-top:32px;
-
-display:flex;
-
-gap:16px;
-
-flex-wrap:wrap;
-
-}
-
-
-/* =============================
-   LOGO AREA
-============================= */
-
-.logo-container{
-
-position:relative;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-}
-
-
-/* GLOW HALO */
-
-.logo-glow{
-
-position:absolute;
-
-width:520px;
-height:520px;
-
-border-radius:50%;
-
-background:
-
-radial-gradient(circle,
-
-rgba(6,182,212,0.28),
-
-rgba(37,99,235,0.18),
-
-transparent
-
-);
-
-filter:blur(70px);
-
-animation: glowPulse 5s infinite alternate;
-
-}
-
-
-@keyframes glowPulse{
-
-from{
-transform:scale(1);
-opacity:.7;
-}
-
-to{
-transform:scale(1.25);
-opacity:1;
-}
-
-}
-
-
-/* LOGO FLOAT */
-
-.brand-logo{
-
-height:580px;
-
-width:auto;
-
-position:relative;
-
-z-index:2;
-
-object-fit:contain;
-
-filter:
-
-drop-shadow(0 50px 100px rgba(6,182,212,0.35));
-
-animation: floatLogo 7s ease-in-out infinite;
-
-}
-
-
-@keyframes floatLogo{
-
-0%{ transform:translateY(0px); }
-
-50%{ transform:translateY(-20px); }
-
-100%{ transform:translateY(0px); }
-
-}
-
-
-/* =============================
-   SECTION
-============================= */
-
-.section{
-
-padding-top:100px;
-padding-bottom:100px;
-
-}
-
-
-.section-header{
-
-text-align:center;
-
-max-width:820px;
-
-margin:auto;
-
-margin-bottom:60px;
-
-}
-
-
-.section-header h2{
-
-font-size:40px;
-margin-bottom:16px;
-
-}
-
-
-.section-header p{
-
-font-size:18px;
-color:var(--text-soft);
-
-}
-
-
-/* =============================
-   HOLIDAY FEATURES GRID
-============================= */
-
-.feature-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:26px;
-
-}
-
-
-.feature-card{
-
-padding:30px;
-
-border-radius:16px;
-
-background:white;
-
-border:1px solid var(--border);
-
-transition:.3s;
-
-}
-
-
-.feature-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 40px 80px rgba(0,0,0,0.10);
-
-border-color:#06b6d4;
-
-}
-
-
-/* =============================
-   DESTINATION METRICS
-============================= */
-
-.metrics{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-
-gap:30px;
-
-text-align:center;
-
-margin-top:40px;
-
-}
-
-
-.metric-number{
-
-font-size:44px;
-
-font-weight:900;
-
-color:#06b6d4;
-
-}
-
-
-.metric-label{
-
-margin-top:8px;
-
-color:var(--text-soft);
-
-}
-
-
-/* =============================
-   RESPONSIVE
-============================= */
-
-@media(max-width:1000px){
-
-.brand-hero-inner{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.brand-logo{
-
-height:360px;
-
-margin-top:40px;
-
-}
-
-.logo-glow{
-
-width:320px;
-height:320px;
-
-}
-
-}
-
-</style>
+<link rel="stylesheet"
+href="../assets/css/style.css">
 
 </head>
 
 
 <body>
 
-<div class="travel-bg"></div>
+
+<!-- BACKGROUND ANIMATION -->
+
+<canvas id="eleviora-mesh"></canvas>
+<canvas id="eleviora-engine"></canvas>
 
 
-<!-- ULTRA PREMIUM APPLE GLASS HEADER -->
 
 <header class="ultra-header">
 
-<div class="ultra-header-inner">
+<div class="ultra-header-inner container">
 
+<div class="ultra-brand"
+onclick="Eleviora.navigate('../index.html')">
 
-<!-- LEFT: LOGO + NAME -->
-
-<div class="ultra-brand">
-
-<img src="assets/images/eleviora-logo.png"
-class="ultra-logo">
-
-<div class="ultra-brand-text">
-
-<div class="ultra-brand-title">
-ELEVIORA TECH
-</div>
-
-<div class="ultra-brand-sub">
-INNOVATIONS
-</div>
+<img src="../assets/images/eleviora-logo.png"
+class="ultra-logo ultra-logo-large">
 
 </div>
-
-</div>
-
-
-
-<!-- RIGHT: NAVIGATION -->
 
 <nav class="ultra-nav">
 
-<a href="index.html">Home</a>
+<a href="../index.html">Home</a>
 
-<a href="about.html">About</a>
+<a href="../about.html">About</a>
 
-<a href="portfolio.html">Portfolio</a>
+<div class="nav-brands">
 
-<a href="contact.html">Contact</a>
+<span class="brands-trigger">
+
+Our Brands
+
+<svg width="14" height="14" viewBox="0 0 24 24">
+<path fill="currentColor" d="M7 10l5 5 5-5z"/>
+</svg>
+
+</span>
+
+<div class="brands-dropdown">
+
+<div class="brand-item"
+onclick="Eleviora.navigate('tastr.html')">
+
+<img src="../assets/images/tastr-logo.png">
+
+<div>
+<div class="brand-name">TASTR</div>
+<div class="brand-desc">Food • Grocery • Delivery Platform</div>
+</div>
+
+</div>
+
+<div class="brand-item"
+onclick="Eleviora.navigate('codestep.html')">
+
+<img src="../assets/images/codestep-logo.png">
+
+<div>
+<div class="brand-name">CodeStep Technologies</div>
+<div class="brand-desc">Enterprise Software & Infrastructure</div>
+</div>
+
+</div>
+
+<div class="brand-item"
+onclick="Eleviora.navigate('vayuara.html')">
+
+<img src="../assets/images/vayuara-logo.png">
+
+<div>
+<div class="brand-name">Vayuara Holidays</div>
+<div class="brand-desc">Global Travel Platform</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<a href="../contact.html">Contact</a>
 
 </nav>
-
 
 </div>
 
 </header>
 
-
-
 <!-- HERO -->
 
-<section class="brand-hero">
+<section class="section">
 
-<div class="container brand-hero-inner">
+<div class="container">
+
+<div class="grid grid-2"
+style="align-items:center; gap:80px;">
 
 
 <div>
 
-<h1 class="brand-title">
-Discover and book unforgettable holidays worldwide
+<h1 class="hero-title">
+
+Vayuara Holidays
+
 </h1>
 
-<p class="brand-description">
 
-Vayuara Holidays is a global holiday and travel platform designed to simplify and enhance travel experiences. We focus on complete holiday packages, destinations, and travel planning, helping customers explore the world effortlessly.
+<div class="hero-badge">
 
-From dream holidays and luxury escapes to business travel and international adventures, Vayuara delivers seamless travel booking powered by modern technology.
+Global Travel Platform
+
+</div>
+
+
+<p class="hero-description">
+
+Vayuara Holidays is a next-generation global travel platform designed to deliver seamless booking experiences across flights, hotels, holiday packages, visa services, travel insurance, forex, transfers, and activities.
+
+Built with scalable global infrastructure, Vayuara Holidays empowers travelers to discover, plan, and book complete travel experiences in one unified platform.
 
 </p>
 
 
-<div class="brand-buttons">
+<div style="margin-top:30px; display:flex; gap:16px; flex-wrap:wrap;">
 
-<a href="https://vayuaraholidays.com" target="_blank" class="btn btn-primary">
-Explore Holidays
+<a href="../contact.html"
+class="btn">
+
+Plan Your Journey
+
 </a>
 
-<a href="../portfolio.html" class="btn btn-secondary">
-Back to Portfolio
+
+<a href="../portfolio.html"
+class="btn btn-secondary">
+
+Explore Platform
+
 </a>
 
 </div>
 
-</div>
-
-
-<div class="logo-container">
-
-<div class="logo-glow"></div>
-
-<img src="../assets/images/vayuara-logo.png" class="brand-logo">
 
 </div>
 
+
+<div style="text-align:center;">
+
+<img src="../assets/images/vayuara-logo.png"
+class="vayuara-hero-logo">
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -478,7 +193,7 @@ Back to Portfolio
 
 
 
-<!-- HOLIDAY SERVICES -->
+<!-- SERVICES -->
 
 <section class="section">
 
@@ -486,49 +201,69 @@ Back to Portfolio
 
 <div class="section-header">
 
-<h2>Holiday and Travel Services</h2>
+<h2>Travel Services</h2>
 
-<p>
-
-Vayuara Holidays provides complete travel planning and booking solutions for individuals, families, and businesses.
-
-</p>
+<p>Complete global travel booking ecosystem.</p>
 
 </div>
 
 
-<div class="feature-grid">
+<div class="grid grid-3">
 
 
-<div class="feature-card">
+<div class="glass-card">
+<h3>Flight Booking</h3>
+<p>Search and book flights across global airlines.</p>
+</div>
+
+
+<div class="glass-card">
+<h3>Hotel Reservations</h3>
+<p>Book hotels across worldwide destinations.</p>
+</div>
+
+
+<div class="glass-card">
 <h3>Holiday Packages</h3>
-<p>Curated domestic and international holiday experiences.</p>
+<p>Complete domestic and international holiday planning.</p>
 </div>
 
-<div class="feature-card">
-<h3>Flights and Hotels</h3>
-<p>Book flights and accommodations globally.</p>
+
+<div class="glass-card">
+<h3>Visa Assistance</h3>
+<p>End-to-end visa processing and assistance.</p>
 </div>
 
-<div class="feature-card">
-<h3>Visa Services</h3>
-<p>Complete visa assistance for international travel.</p>
-</div>
 
-<div class="feature-card">
+<div class="glass-card">
 <h3>Travel Insurance</h3>
-<p>Secure and reliable travel insurance coverage.</p>
+<p>Secure travel insurance coverage globally.</p>
 </div>
 
-<div class="feature-card">
-<h3>Activities and Experiences</h3>
-<p>Discover tours, activities, and local experiences.</p>
+
+<div class="glass-card">
+<h3>Forex Services</h3>
+<p>Foreign exchange and currency solutions.</p>
 </div>
 
-<div class="feature-card">
-<h3>Transfers and Transport</h3>
-<p>Airport transfers, buses, and transport services.</p>
+
+<div class="glass-card">
+<h3>Airport Transfers</h3>
+<p>Global airport pickup and transfer services.</p>
 </div>
+
+
+<div class="glass-card">
+<h3>Activities & Experiences</h3>
+<p>Book activities and travel experiences.</p>
+</div>
+
+
+<div class="glass-card">
+<h3>Bus & Ground Transport</h3>
+<p>Domestic and international transport booking.</p>
+</div>
+
 
 </div>
 
@@ -538,7 +273,37 @@ Vayuara Holidays provides complete travel planning and booking solutions for ind
 
 
 
-<!-- HOLIDAY VISION -->
+<!-- PLATFORM VISION -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="glass-card elite-card">
+
+<h2>Platform Vision</h2>
+
+<p>
+
+Vayuara Holidays is engineered to become a globally recognized travel platform delivering scalable, reliable, and seamless travel experiences.
+
+</p>
+
+<p>
+
+The platform integrates multiple travel services into a unified ecosystem, ensuring convenience, efficiency, and scalability for global travelers.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FUTURE EXPANSION -->
 
 <section class="section">
 
@@ -546,40 +311,39 @@ Vayuara Holidays provides complete travel planning and booking solutions for ind
 
 <div class="section-header">
 
-<h2>Holiday-First Vision</h2>
+<h2>Global Expansion Strategy</h2>
+
+</div>
+
+
+<div class="grid grid-2">
+
+
+<div class="glass-card">
+
+<h3>Global Market Expansion</h3>
 
 <p>
 
-Vayuara Holidays focuses on delivering memorable travel experiences through reliable booking systems, modern infrastructure, and global partnerships.
-
-Our mission is to become a trusted global holiday platform serving customers worldwide.
+Expansion into major global travel markets with scalable infrastructure.
 
 </p>
 
 </div>
 
 
-<div class="metrics">
+<div class="glass-card">
 
-<div>
-<div class="metric-number">Global</div>
-<div class="metric-label">Destinations</div>
+<h3>Technology Infrastructure</h3>
+
+<p>
+
+Cloud-native travel platform designed for global scalability.
+
+</p>
+
 </div>
 
-<div>
-<div class="metric-number">Complete</div>
-<div class="metric-label">Holiday Solutions</div>
-</div>
-
-<div>
-<div class="metric-number">Modern</div>
-<div class="metric-label">Technology</div>
-</div>
-
-<div>
-<div class="metric-number">Future</div>
-<div class="metric-label">Global Expansion</div>
-</div>
 
 </div>
 
@@ -589,544 +353,106 @@ Our mission is to become a trusted global holiday platform serving customers wor
 
 
 
-<footer class="footer">
+<!-- CONTACT -->
+
+<section class="section">
 
 <div class="container">
 
-<p>
-Vayuara Holidays is a platform developed by Elevioratech Innovations LLP
-</p>
+<div class="glass-card elite-card">
+
+<h2>Contact Vayuara Holidays</h2>
 
 <p>
-© 2026 Elevioratech Innovations LLP
+
+Platform operated by Eleviora Tech Innovations.<br><br>
+
+info@elevioratech.com
+
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer elite-footer">
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="footer-brand">
+ELEVIORA TECH INNOVATIONS
+</div>
+
+<div class="footer-desc">
+Global Technology Innovation Company
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Quick Links</div>
+
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="../portfolio.html">Portfolio</a>
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Platforms</div>
+
+<a href="tastr.html">TASTR</a>
+<a href="codestep.html">CodeStep</a>
+<a href="vayuara.html">Vayuara</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Legal</div>
+
+<a href="../privacy.html">Privacy Policy</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Eleviora Tech Innovations
 
 </div>
 
 </footer>
 
 
-<script src="../assets/js/particles.js"></script>
+
+<!-- SCRIPTS -->
+
+<script src="../assets/js/mesh.js"></script>
+<script src="../assets/js/engine.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/whatsapp.js"></script>
+<script src="../assets/js/cursor.js"></script>
+<script src="../assets/js/transition.js"></script>
 
-<!-- =============================
-     ULTRA PREMIUM WHATSAPP CHAT
-============================== -->
 
-<style>
-
-.wa-widget{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-z-index:9999;
-
-font-family:Inter,system-ui;
-
-}
-
-
-/* FLOAT BUTTON */
-
-.wa-float{
-
-width:64px;
-height:64px;
-
-border-radius:20px;
-
-background:linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-cursor:pointer;
-
-box-shadow:0 10px 40px rgba(37,211,102,0.4);
-
-transition:0.3s;
-
-}
-
-.wa-float:hover{
-
-transform:scale(1.1);
-
-}
-
-
-/* CHAT BOX */
-
-.wa-chat-box{
-
-width:340px;
-
-height:480px;
-
-background:rgba(255,255,255,0.75);
-
-backdrop-filter:blur(20px);
-
-border-radius:20px;
-
-box-shadow:0 20px 60px rgba(0,0,0,0.2);
-
-display:none;
-
-flex-direction:column;
-
-overflow:hidden;
-
-margin-bottom:15px;
-
-}
-
-
-/* HEADER */
-
-.wa-header{
-
-background:linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-color:white;
-
-padding:14px;
-
-display:flex;
-
-align-items:center;
-
-font-weight:600;
-
-}
-
-.wa-close{
-
-margin-left:auto;
-
-cursor:pointer;
-
-font-size:20px;
-
-}
-
-
-/* BODY */
-
-.wa-body{
-
-flex:1;
-
-padding:14px;
-
-overflow:auto;
-
-background:#f8fafc;
-
-}
-
-.wa-msg{
-
-background:white;
-
-padding:10px;
-
-border-radius:10px;
-
-margin-bottom:10px;
-
-display:inline-block;
-
-}
-
-
-/* PROMPTS */
-
-.wa-prompt{
-
-background:#e2e8f0;
-
-padding:10px;
-
-border-radius:10px;
-
-margin-bottom:8px;
-
-cursor:pointer;
-
-transition:0.2s;
-
-}
-
-.wa-prompt:hover{
-
-background:#cbd5e1;
-
-}
-
-
-/* FOOTER */
-
-.wa-footer{
-
-display:flex;
-
-border-top:1px solid #ddd;
-
-}
-
-.wa-footer input{
-
-flex:1;
-
-padding:12px;
-
-border:none;
-
-outline:none;
-
-}
-
-.wa-footer button{
-
-background:#25D366;
-
-color:white;
-
-border:none;
-
-padding:12px 16px;
-
-cursor:pointer;
-
-}
-
-</style>
-
-
-
-<div class="wa-widget">
-
-<div class="wa-chat-box" id="waBox">
-
-<div class="wa-header">
-
-Elevioratech Support
-
-<div class="wa-close" onclick="waToggle()">×</div>
-
-</div>
-
-
-<div class="wa-body">
-
-<div class="wa-msg">
-Hello 👋 How can we help you?
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to know about Elevioratech.')">
-About Elevioratech
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to know about TASTR.')">
-TASTR Platform
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I need software services.')">
-Software Services
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to book holidays.')">
-Holiday Booking
-</div>
-
-</div>
-
-
-<div class="wa-footer">
-
-<input id="waInput"
-placeholder="Type a message"
-onkeypress="waEnter(event)">
-
-<button onclick="waSend()">Send</button>
-
-</div>
-
-</div>
-
-
-
-<div class="wa-float" onclick="waToggle()">
-
-<svg viewBox="0 0 32 32" width="30">
-
-<path fill="white"
-d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.5 2.1 7.9L.5 31.5l7.8-2.1c2.3 1.2 4.9 1.8 7.7 1.8 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5z"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-
-<script>
-
-/* CHANGE NUMBER HERE ONLY */
-
-var waNumber = "919964488440";
-
-
-function waToggle(){
-
-var box =
-document.getElementById("waBox");
-
-box.style.display =
-box.style.display === "flex"
-? "none"
-: "flex";
-
-}
-
-
-function waSet(text){
-
-document.getElementById("waInput").value = text;
-
-}
-
-
-function waEnter(e){
-
-if(e.key === "Enter"){
-
-waSend();
-
-}
-
-}
-
-
-function waSend(){
-
-var msg =
-document.getElementById("waInput").value;
-
-if(!msg) return;
-
-var url =
-"https://wa.me/" +
-waNumber +
-"?text=" +
-encodeURIComponent(msg);
-
-window.open(url,"_blank");
-
-}
-
-</script>
-   
-   <script>
-
-/* HEADER SHRINK ON SCROLL */
-
-window.addEventListener("scroll", function(){
-
-const header =
-document.querySelector(".ultra-header");
-
-if(window.scrollY > 40){
-
-header.classList.add("scrolled");
-
-}else{
-
-header.classList.remove("scrolled");
-
-}
-
-});
-
-
-/* ACTIVE PAGE HIGHLIGHT */
-
-const links =
-document.querySelectorAll(".ultra-nav a");
-
-links.forEach(link => {
-
-if(link.href === window.location.href){
-
-link.classList.add("active");
-
-}
-
-});
-
-</script>
-  <script>
-
-const canvas = document.getElementById("premiumDots");
-
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-
-canvas.width = 420;
-
-
-/* DOT SETTINGS */
-
-const dots = [];
-
-const dotCount = 28;
-
-
-/* CREATE DOTS */
-
-for(let i=0;i<dotCount;i++){
-
-dots.push({
-
-x: Math.random() * canvas.width,
-
-y: Math.random() * canvas.height,
-
-vx: (Math.random()-0.5)*0.4,
-
-vy: (Math.random()-0.5)*0.4
-
-});
-
-}
-
-
-/* SCROLL OFFSET */
-
-let scrollOffset = 0;
-
-window.addEventListener("scroll", () => {
-
-scrollOffset = window.scrollY * 0.15;
-
-});
-
-
-/* DRAW */
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-
-/* DRAW LINES */
-
-for(let i=0;i<dots.length;i++){
-
-for(let j=i+1;j<dots.length;j++){
-
-let dx = dots[i].x - dots[j].x;
-
-let dy = dots[i].y - dots[j].y;
-
-let dist = Math.sqrt(dx*dx+dy*dy);
-
-if(dist < 140){
-
-ctx.strokeStyle =
-"rgba(37,99,235,"+(1-dist/140)*0.4+")";
-
-ctx.lineWidth = 1;
-
-ctx.beginPath();
-
-ctx.moveTo(dots[i].x, dots[i].y + scrollOffset);
-
-ctx.lineTo(dots[j].x, dots[j].y + scrollOffset);
-
-ctx.stroke();
-
-}
-
-}
-
-}
-
-
-/* DRAW DOTS */
-
-dots.forEach(dot=>{
-
-ctx.beginPath();
-
-ctx.arc(dot.x, dot.y + scrollOffset, 2, 0, Math.PI*2);
-
-ctx.fillStyle = "#2563eb";
-
-ctx.fill();
-
-
-/* MOVE */
-
-dot.x += dot.vx;
-
-dot.y += dot.vy;
-
-
-/* BOUNDS */
-
-if(dot.x < 0 || dot.x > canvas.width)
-
-dot.vx *= -1;
-
-if(dot.y < 0 || dot.y > canvas.height)
-
-dot.vy *= -1;
-
-});
-
-
-requestAnimationFrame(draw);
-
-}
-
-
-/* START */
-
-draw();
-
-
-/* RESIZE */
-
-window.addEventListener("resize", ()=>{
-
-canvas.height = window.innerHeight;
-
-});
-
-</script>
 </body>
-<!-- PREMIUM CONNECTING DOTS BACKGROUND -->
-
-<canvas id="premiumDots"></canvas>
 </html>

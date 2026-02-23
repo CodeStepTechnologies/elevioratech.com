@@ -2,473 +2,190 @@
 <html lang="en">
 
 <head>
-   <!-- FAVICON -->
 
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-<link rel="shortcut icon" href="assets/images/favicon.png">
-
-<link rel="apple-touch-icon" href="assets/images/favicon.png">
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TN11T6PBE5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TN11T6PBE5');
+</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CodeStep Technologies | Elevioratech Innovations LLP</title>
+<title>CodeStep Technologies | Software Development Agency</title>
 
-<meta name="description" content="CodeStep Technologies provides enterprise software, applications, UI/UX, branding, and scalable digital solutions.">
+<meta name="description"
+content="CodeStep Technologies builds enterprise software, mobile apps, web platforms, and branding solutions for global businesses.">
 
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon"
+href="../assets/images/favicon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-
-/* ============================
-   FUTURISTIC BACKGROUND
-============================ */
-
-.futuristic-bg{
-
-position:fixed;
-width:100%;
-height:100%;
-z-index:-3;
-
-background:
-
-radial-gradient(circle at 15% 20%, rgba(37,99,235,0.12), transparent),
-radial-gradient(circle at 85% 80%, rgba(6,182,212,0.12), transparent);
-
-}
-
-
-/* ============================
-   HERO SECTION
-============================ */
-
-.brand-hero{
-
-padding-top:140px;
-padding-bottom:100px;
-
-}
-
-
-.brand-hero-inner{
-
-display:grid;
-
-grid-template-columns: 1fr 540px;
-
-align-items:center;
-
-gap:60px;
-
-min-height:75vh;
-
-}
-
-
-.brand-title{
-
-font-size:64px;
-
-font-weight:900;
-
-letter-spacing:-1px;
-
-line-height:1.1;
-
-background:linear-gradient(90deg,#2563eb,#06b6d4);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-
-.brand-description{
-
-margin-top:24px;
-
-font-size:20px;
-
-color:var(--text-soft);
-
-line-height:1.7;
-
-max-width:600px;
-
-}
-
-
-.brand-buttons{
-
-margin-top:32px;
-
-display:flex;
-
-gap:16px;
-
-flex-wrap:wrap;
-
-}
-
-
-/* ============================
-   LOGO AREA
-============================ */
-
-.logo-container{
-
-position:relative;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-}
-
-
-.logo-glow{
-
-position:absolute;
-
-width:480px;
-height:480px;
-
-border-radius:50%;
-
-background:
-
-radial-gradient(circle,
-
-rgba(37,99,235,0.25),
-
-rgba(6,182,212,0.15),
-
-transparent
-
-);
-
-filter:blur(60px);
-
-animation: glowPulse 4s infinite alternate;
-
-}
-
-
-@keyframes glowPulse{
-
-from{
-transform:scale(1);
-opacity:.7;
-}
-
-to{
-transform:scale(1.2);
-opacity:1;
-}
-
-}
-
-
-.brand-logo{
-
-height:540px;
-
-width:auto;
-
-object-fit:contain;
-
-position:relative;
-
-z-index:2;
-
-filter:
-
-drop-shadow(0 40px 80px rgba(37,99,235,0.3));
-
-animation: floatLogo 6s ease-in-out infinite;
-
-}
-
-
-@keyframes floatLogo{
-
-0%{ transform:translateY(0px); }
-
-50%{ transform:translateY(-18px); }
-
-100%{ transform:translateY(0px); }
-
-}
-
-
-/* ============================
-   SECTION
-============================ */
-
-.section{
-
-padding-top:100px;
-padding-bottom:100px;
-
-}
-
-
-.section-header{
-
-text-align:center;
-
-max-width:800px;
-
-margin:auto;
-
-margin-bottom:60px;
-
-}
-
-
-.section-header h2{
-
-font-size:40px;
-margin-bottom:16px;
-
-}
-
-
-.section-header p{
-
-color:var(--text-soft);
-font-size:18px;
-
-}
-
-
-/* ============================
-   FEATURE GRID
-============================ */
-
-.feature-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:24px;
-
-}
-
-
-.feature-card{
-
-padding:28px;
-
-border-radius:14px;
-
-background:white;
-
-border:1px solid var(--border);
-
-transition:.3s;
-
-}
-
-
-.feature-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 30px 60px rgba(0,0,0,0.08);
-
-border-color:#2563eb;
-
-}
-
-
-/* ============================
-   METRICS
-============================ */
-
-.metrics{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-
-gap:30px;
-
-text-align:center;
-
-margin-top:40px;
-
-}
-
-
-.metric-number{
-
-font-size:42px;
-
-font-weight:800;
-
-color:#2563eb;
-
-}
-
-
-.metric-label{
-
-margin-top:8px;
-
-color:var(--text-soft);
-
-}
-
-
-/* ============================
-   RESPONSIVE
-============================ */
-
-@media(max-width:1000px){
-
-.brand-hero-inner{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.brand-logo{
-
-height:340px;
-
-margin-top:40px;
-
-}
-
-.logo-glow{
-
-width:300px;
-height:300px;
-
-}
-
-}
-
-</style>
+<link rel="stylesheet"
+href="../assets/css/style.css">
 
 </head>
 
 
 <body>
 
-<div class="futuristic-bg"></div>
+
+<!-- BACKGROUND ANIMATION -->
+
+<canvas id="eleviora-mesh"></canvas>
+<canvas id="eleviora-engine"></canvas>
 
 
-<!-- ULTRA PREMIUM APPLE GLASS HEADER -->
 
 <header class="ultra-header">
 
-<div class="ultra-header-inner">
+<div class="ultra-header-inner container">
 
+<div class="ultra-brand"
+onclick="Eleviora.navigate('../index.html')">
 
-<!-- LEFT: LOGO + NAME -->
-
-<div class="ultra-brand">
-
-<img src="assets/images/eleviora-logo.png"
-class="ultra-logo">
-
-<div class="ultra-brand-text">
-
-<div class="ultra-brand-title">
-ELEVIORA TECH
-</div>
-
-<div class="ultra-brand-sub">
-INNOVATIONS
-</div>
+<img src="../assets/images/eleviora-logo.png"
+class="ultra-logo ultra-logo-large">
 
 </div>
-
-</div>
-
-
-
-<!-- RIGHT: NAVIGATION -->
 
 <nav class="ultra-nav">
 
-<a href="index.html">Home</a>
+<a href="../index.html">Home</a>
 
-<a href="about.html">About</a>
+<a href="../about.html">About</a>
 
-<a href="portfolio.html">Portfolio</a>
+<div class="nav-brands">
 
-<a href="contact.html">Contact</a>
+<span class="brands-trigger">
+
+Our Brands
+
+<svg width="14" height="14" viewBox="0 0 24 24">
+<path fill="currentColor" d="M7 10l5 5 5-5z"/>
+</svg>
+
+</span>
+
+<div class="brands-dropdown">
+
+<div class="brand-item"
+onclick="Eleviora.navigate('tastr.html')">
+
+<img src="../assets/images/tastr-logo.png">
+
+<div>
+<div class="brand-name">TASTR</div>
+<div class="brand-desc">Food • Grocery • Delivery Platform</div>
+</div>
+
+</div>
+
+<div class="brand-item"
+onclick="Eleviora.navigate('codestep.html')">
+
+<img src="../assets/images/codestep-logo.png">
+
+<div>
+<div class="brand-name">CodeStep Technologies</div>
+<div class="brand-desc">Enterprise Software & Infrastructure</div>
+</div>
+
+</div>
+
+<div class="brand-item"
+onclick="Eleviora.navigate('vayuara.html')">
+
+<img src="../assets/images/vayuara-logo.png">
+
+<div>
+<div class="brand-name">Vayuara Holidays</div>
+<div class="brand-desc">Global Travel Platform</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<a href="../contact.html">Contact</a>
 
 </nav>
-
 
 </div>
 
 </header>
 
-
-
 <!-- HERO -->
 
-<section class="brand-hero">
+<section class="section">
 
-<div class="container brand-hero-inner">
+<div class="container">
+
+<div class="grid grid-2"
+style="align-items:center; gap:60px;">
 
 
 <div>
 
-<h1 class="brand-title">
-Enterprise technology solutions for modern businesses
+<h1 class="hero-title">
+
+CodeStep Technologies
+
 </h1>
 
-<p class="brand-description">
+<div class="hero-badge">
 
-CodeStep Technologies is a global technology company delivering scalable software, applications, and digital solutions. We help businesses transform through modern engineering, powerful infrastructure, and superior design systems.
+Software Development Agency
 
-Our mission is to build reliable, scalable, and high-performance technology platforms that enable business growth and innovation.
+</div>
+
+
+<p class="hero-description">
+
+CodeStep Technologies is a global software development and branding company focused on building scalable applications, enterprise platforms, and digital infrastructure.
+
+We help businesses transform digitally with modern software architecture, mobile applications, and brand identity systems.
 
 </p>
 
 
-<div class="brand-buttons">
+<div style="margin-top:30px; display:flex; gap:16px; flex-wrap:wrap;">
 
-<a href="https://codesteptech.com" target="_blank" class="btn btn-primary">
+<a href="../contact.html"
+class="btn">
+
+Contact Us
+
+</a>
+
+
+<a href="https://codesteptech.com"
+target="_blank"
+class="btn btn-secondary">
 
 Visit Official Website
 
 </a>
 
-<a href="../portfolio.html" class="btn btn-secondary">
-
-Back to Portfolio
-
-</a>
-
 </div>
+
 
 </div>
 
 
+<div style="text-align:center;">
 
-<div class="logo-container">
-
-<div class="logo-glow"></div>
-
-<img src="../assets/images/codestep-logo.png" class="brand-logo">
+<img src="../assets/images/codestep-logo.png"
+class="codestep-hero-logo">
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -484,97 +201,44 @@ Back to Portfolio
 
 <div class="section-header">
 
-<h2>Core Services</h2>
+<h2>Services</h2>
 
-<p>
-
-CodeStep Technologies delivers complete software and digital solutions for modern enterprises and startups.
-
-</p>
+<p>Enterprise software and branding solutions.</p>
 
 </div>
 
 
-<div class="feature-grid">
+<div class="grid grid-3">
 
-
-<div class="feature-card">
-
+<div class="glass-card">
 <h3>Software Development</h3>
-
-<p>
-
-Custom enterprise software built with modern technologies and scalable architecture.
-
-</p>
-
+<p>Custom enterprise software designed for scalability.</p>
 </div>
 
-
-<div class="feature-card">
-
-<h3>Web and Mobile Applications</h3>
-
-<p>
-
-Modern, responsive, and high-performance applications for all platforms.
-
-</p>
-
+<div class="glass-card">
+<h3>Web Development</h3>
+<p>Modern web applications using scalable frameworks.</p>
 </div>
 
+<div class="glass-card">
+<h3>Mobile App Development</h3>
+<p>Android and iOS mobile application development.</p>
+</div>
 
-<div class="feature-card">
-
+<div class="glass-card">
 <h3>UI/UX Design</h3>
-
-<p>
-
-User-centered design systems delivering superior digital experiences.
-
-</p>
-
+<p>User-centered interface and experience design.</p>
 </div>
 
-
-<div class="feature-card">
-
-<h3>Branding and Digital Identity</h3>
-
-<p>
-
-Professional branding, visual identity, and digital presence solutions.
-
-</p>
-
+<div class="glass-card">
+<h3>Branding Services</h3>
+<p>Logo, brand identity, and marketing design systems.</p>
 </div>
 
-
-<div class="feature-card">
-
-<h3>Enterprise Systems</h3>
-
-<p>
-
-Reliable and scalable enterprise infrastructure and software platforms.
-
-</p>
-
+<div class="glass-card">
+<h3>E-Commerce Platforms</h3>
+<p>Scalable online commerce infrastructure.</p>
 </div>
-
-
-<div class="feature-card">
-
-<h3>Cloud and Infrastructure</h3>
-
-<p>
-
-Cloud-native systems designed for reliability, performance, and scalability.
-
-</p>
-
-</div>
-
 
 </div>
 
@@ -584,7 +248,7 @@ Cloud-native systems designed for reliability, performance, and scalability.
 
 
 
-<!-- METRICS -->
+<!-- TECHNOLOGY STACK -->
 
 <section class="section">
 
@@ -592,31 +256,59 @@ Cloud-native systems designed for reliability, performance, and scalability.
 
 <div class="section-header">
 
-<h2>Technology Vision</h2>
+<h2>Technology Stack</h2>
 
 </div>
 
 
-<div class="metrics">
+<div class="clean-showcase">
 
-<div>
-<div class="metric-number">Global</div>
-<div class="metric-label">Technology Vision</div>
+<img src="../assets/images/flutter.svg" class="brand-logo">
+<img src="../assets/images/react.svg" class="brand-logo">
+<img src="../assets/images/node.svg" class="brand-logo">
+<img src="../assets/images/aws.svg" class="brand-logo">
+<img src="../assets/images/firebase.svg" class="brand-logo">
+<img src="../assets/images/mongodb.svg" class="brand-logo">
+
 </div>
 
-<div>
-<div class="metric-number">Modern</div>
-<div class="metric-label">Architecture</div>
 </div>
 
-<div>
-<div class="metric-number">Scalable</div>
-<div class="metric-label">Infrastructure</div>
+</section>
+
+
+
+<!-- PROCESS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header">
+
+<h2>Development Process</h2>
+
 </div>
 
-<div>
-<div class="metric-number">Enterprise</div>
-<div class="metric-label">Solutions</div>
+
+<div class="flowchart">
+
+<div class="flow-row">
+
+<div class="flow-box">Client Enquiry</div>
+
+<div class="flow-box">Planning</div>
+
+<div class="flow-box">Design</div>
+
+<div class="flow-box">Development</div>
+
+<div class="flow-box">Testing</div>
+
+<div class="flow-box">Deployment</div>
+
+<div class="flow-box">Support</div>
+
 </div>
 
 </div>
@@ -627,544 +319,154 @@ Cloud-native systems designed for reliability, performance, and scalability.
 
 
 
-<footer class="footer">
+<!-- INDUSTRIES -->
+
+<section class="section">
 
 <div class="container">
 
-<p>
-CodeStep Technologies is a company developed by Elevioratech Innovations LLP
-</p>
+<div class="section-header">
+
+<h2>Industries Served</h2>
+
+</div>
+
+
+<div class="grid grid-3">
+
+<div class="glass-card">
+<h3>FinTech</h3>
+<p>Payment, banking, and finance applications.</p>
+</div>
+
+<div class="glass-card">
+<h3>Healthcare</h3>
+<p>Medical and telemedicine platforms.</p>
+</div>
+
+<div class="glass-card">
+<h3>E-Commerce</h3>
+<p>Online retail and delivery systems.</p>
+</div>
+
+<div class="glass-card">
+<h3>Education</h3>
+<p>EdTech and learning platforms.</p>
+</div>
+
+<div class="glass-card">
+<h3>Real Estate</h3>
+<p>Property and PropTech platforms.</p>
+</div>
+
+<div class="glass-card">
+<h3>Social Platforms</h3>
+<p>Social networking and media platforms.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="glass-card elite-card">
+
+<h2>Contact CodeStep Technologies</h2>
 
 <p>
-© 2026 Elevioratech Innovations LLP
+
+Email: contact@codesteptech.com<br>
+Phone: +91 6362153519<br>
+Website: codesteptech.com
+
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer elite-footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-brand">
+ELEVIORA TECH INNOVATIONS
+</div>
+
+<div class="footer-desc">
+Global Technology Innovation Company
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Quick Links</div>
+
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="../portfolio.html">Portfolio</a>
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Platforms</div>
+
+<a href="tastr.html">TASTR</a>
+<a href="codestep.html">CodeStep</a>
+<a href="vayuara.html">Vayuara</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">Legal</div>
+
+<a href="../privacy.html">Privacy Policy</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Eleviora Tech Innovations
 
 </div>
 
 </footer>
 
 
-<script src="../assets/js/particles.js"></script>
+
+<!-- SCRIPTS -->
+
+<script src="../assets/js/mesh.js"></script>
+<script src="../assets/js/engine.js"></script>
 <script src="../assets/js/main.js"></script>
 
-  <!-- =============================
-     ULTRA PREMIUM WHATSAPP CHAT
-============================== -->
-
-<style>
-
-.wa-widget{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-z-index:9999;
-
-font-family:Inter,system-ui;
-
-}
-
-
-/* FLOAT BUTTON */
-
-.wa-float{
-
-width:64px;
-height:64px;
-
-border-radius:20px;
-
-background:linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-cursor:pointer;
-
-box-shadow:0 10px 40px rgba(37,211,102,0.4);
-
-transition:0.3s;
-
-}
-
-.wa-float:hover{
-
-transform:scale(1.1);
-
-}
-
-
-/* CHAT BOX */
-
-.wa-chat-box{
-
-width:340px;
-
-height:480px;
-
-background:rgba(255,255,255,0.75);
-
-backdrop-filter:blur(20px);
-
-border-radius:20px;
-
-box-shadow:0 20px 60px rgba(0,0,0,0.2);
-
-display:none;
-
-flex-direction:column;
-
-overflow:hidden;
-
-margin-bottom:15px;
-
-}
-
-
-/* HEADER */
-
-.wa-header{
-
-background:linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-color:white;
-
-padding:14px;
-
-display:flex;
-
-align-items:center;
-
-font-weight:600;
-
-}
-
-.wa-close{
-
-margin-left:auto;
-
-cursor:pointer;
-
-font-size:20px;
-
-}
-
-
-/* BODY */
-
-.wa-body{
-
-flex:1;
-
-padding:14px;
-
-overflow:auto;
-
-background:#f8fafc;
-
-}
-
-.wa-msg{
-
-background:white;
-
-padding:10px;
-
-border-radius:10px;
-
-margin-bottom:10px;
-
-display:inline-block;
-
-}
-
-
-/* PROMPTS */
-
-.wa-prompt{
-
-background:#e2e8f0;
-
-padding:10px;
-
-border-radius:10px;
-
-margin-bottom:8px;
-
-cursor:pointer;
-
-transition:0.2s;
-
-}
-
-.wa-prompt:hover{
-
-background:#cbd5e1;
-
-}
-
-
-/* FOOTER */
-
-.wa-footer{
-
-display:flex;
-
-border-top:1px solid #ddd;
-
-}
-
-.wa-footer input{
-
-flex:1;
-
-padding:12px;
-
-border:none;
-
-outline:none;
-
-}
-
-.wa-footer button{
-
-background:#25D366;
-
-color:white;
-
-border:none;
-
-padding:12px 16px;
-
-cursor:pointer;
-
-}
-
-</style>
-
-
-
-<div class="wa-widget">
-
-<div class="wa-chat-box" id="waBox">
-
-<div class="wa-header">
-
-Elevioratech Support
-
-<div class="wa-close" onclick="waToggle()">×</div>
-
-</div>
-
-
-<div class="wa-body">
-
-<div class="wa-msg">
-Hello 👋 How can we help you?
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to know about Elevioratech.')">
-About Elevioratech
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to know about TASTR.')">
-TASTR Platform
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I need software services.')">
-Software Services
-</div>
-
-<div class="wa-prompt"
-onclick="waSet('Hello, I want to book holidays.')">
-Holiday Booking
-</div>
-
-</div>
-
-
-<div class="wa-footer">
-
-<input id="waInput"
-placeholder="Type a message"
-onkeypress="waEnter(event)">
-
-<button onclick="waSend()">Send</button>
-
-</div>
-
-</div>
-
-
-
-<div class="wa-float" onclick="waToggle()">
-
-<svg viewBox="0 0 32 32" width="30">
-
-<path fill="white"
-d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.5 2.1 7.9L.5 31.5l7.8-2.1c2.3 1.2 4.9 1.8 7.7 1.8 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5z"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-
-<script>
-
-/* CHANGE NUMBER HERE ONLY */
-
-var waNumber = "919964488440";
-
-
-function waToggle(){
-
-var box =
-document.getElementById("waBox");
-
-box.style.display =
-box.style.display === "flex"
-? "none"
-: "flex";
-
-}
-
-
-function waSet(text){
-
-document.getElementById("waInput").value = text;
-
-}
-
-
-function waEnter(e){
-
-if(e.key === "Enter"){
-
-waSend();
-
-}
-
-}
-
-
-function waSend(){
-
-var msg =
-document.getElementById("waInput").value;
-
-if(!msg) return;
-
-var url =
-"https://wa.me/" +
-waNumber +
-"?text=" +
-encodeURIComponent(msg);
-
-window.open(url,"_blank");
-
-}
-
-</script>
-   
-   <script>
-
-/* HEADER SHRINK ON SCROLL */
-
-window.addEventListener("scroll", function(){
-
-const header =
-document.querySelector(".ultra-header");
-
-if(window.scrollY > 40){
-
-header.classList.add("scrolled");
-
-}else{
-
-header.classList.remove("scrolled");
-
-}
-
-});
-
-
-/* ACTIVE PAGE HIGHLIGHT */
-
-const links =
-document.querySelectorAll(".ultra-nav a");
-
-links.forEach(link => {
-
-if(link.href === window.location.href){
-
-link.classList.add("active");
-
-}
-
-});
-
-</script>
-   <script>
-
-const canvas = document.getElementById("premiumDots");
-
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-
-canvas.width = 420;
-
-
-/* DOT SETTINGS */
-
-const dots = [];
-
-const dotCount = 28;
-
-
-/* CREATE DOTS */
-
-for(let i=0;i<dotCount;i++){
-
-dots.push({
-
-x: Math.random() * canvas.width,
-
-y: Math.random() * canvas.height,
-
-vx: (Math.random()-0.5)*0.4,
-
-vy: (Math.random()-0.5)*0.4
-
-});
-
-}
-
-
-/* SCROLL OFFSET */
-
-let scrollOffset = 0;
-
-window.addEventListener("scroll", () => {
-
-scrollOffset = window.scrollY * 0.15;
-
-});
-
-
-/* DRAW */
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-
-/* DRAW LINES */
-
-for(let i=0;i<dots.length;i++){
-
-for(let j=i+1;j<dots.length;j++){
-
-let dx = dots[i].x - dots[j].x;
-
-let dy = dots[i].y - dots[j].y;
-
-let dist = Math.sqrt(dx*dx+dy*dy);
-
-if(dist < 140){
-
-ctx.strokeStyle =
-"rgba(37,99,235,"+(1-dist/140)*0.4+")";
-
-ctx.lineWidth = 1;
-
-ctx.beginPath();
-
-ctx.moveTo(dots[i].x, dots[i].y + scrollOffset);
-
-ctx.lineTo(dots[j].x, dots[j].y + scrollOffset);
-
-ctx.stroke();
-
-}
-
-}
-
-}
-
-
-/* DRAW DOTS */
-
-dots.forEach(dot=>{
-
-ctx.beginPath();
-
-ctx.arc(dot.x, dot.y + scrollOffset, 2, 0, Math.PI*2);
-
-ctx.fillStyle = "#2563eb";
-
-ctx.fill();
-
-
-/* MOVE */
-
-dot.x += dot.vx;
-
-dot.y += dot.vy;
-
-
-/* BOUNDS */
-
-if(dot.x < 0 || dot.x > canvas.width)
-
-dot.vx *= -1;
-
-if(dot.y < 0 || dot.y > canvas.height)
-
-dot.vy *= -1;
-
-});
-
-
-requestAnimationFrame(draw);
-
-}
-
-
-/* START */
-
-draw();
-
-
-/* RESIZE */
-
-window.addEventListener("resize", ()=>{
-
-canvas.height = window.innerHeight;
-
-});
-
-</script>
 </body>
-<!-- PREMIUM CONNECTING DOTS BACKGROUND -->
-
-<canvas id="premiumDots"></canvas>
 </html>

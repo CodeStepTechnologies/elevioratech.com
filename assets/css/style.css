@@ -1,396 +1,161 @@
+/* =========================================================
+   ELEVIORA ELITE DESIGN SYSTEM
+   Apple + Stripe + Tesla Hybrid UI Framework
+   Version: Eleviora Elite 1.0
+========================================================= */
+
+
 /* =========================
-   GLOBAL FOUNDATION
+   ROOT SYSTEM
 ========================= */
 
 :root{
 
 --primary:#2563eb;
---accent:#06b6d4;
+--secondary:#06b6d4;
 
---bg:#ffffff;
---bg-soft:#f8fafc;
+--bg-main:#f8fafc;
+--bg-glass:rgba(255,255,255,0.65);
 
---text:#0f172a;
+--text-main:#0f172a;
 --text-soft:#64748b;
 
---border:#e2e8f0;
+--border-glass:rgba(255,255,255,0.5);
 
---radius:14px;
+--shadow-soft:
+0 10px 30px rgba(0,0,0,0.06);
 
---container:1200px;
+--shadow-premium:
+0 20px 60px rgba(0,0,0,0.12);
+
+--radius:18px;
+
+--transition:
+all 0.35s cubic-bezier(.4,0,.2,1);
 
 }
 
+
+/* =========================
+   RESET
+========================= */
 
 *{
-box-sizing:border-box;
+
 margin:0;
 padding:0;
+box-sizing:border-box;
+
 }
 
+html{
+
+scroll-behavior:smooth;
+
+}
 
 body{
 
-font-family:Inter,system-ui;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"SF Pro Display",
+Inter,
+system-ui,
+sans-serif;
 
-background:var(--bg);
+background:var(--bg-main);
 
-color:var(--text);
-
-line-height:1.6;
+color:var(--text-main);
 
 overflow-x:hidden;
 
+position:relative;
+  
+  /* ============================================
+   TASTR HERO LOGO RESPONSIVE SYSTEM
+============================================ */
+
+/* DESKTOP */
+
+.tastr-hero-logo{
+
+height:260px;
+
+max-width:100%;
+
+object-fit:contain;
+
+filter:
+drop-shadow(0 40px 80px rgba(0,0,0,0.25));
+
+transition:all 0.4s ease;
+
 }
 
+
+/* LARGE DESKTOP */
+
+@media(min-width:1400px){
+
+.tastr-hero-logo{
+
+height:320px;
+
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.tastr-hero-logo{
+
+height:180px;
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.tastr-hero-logo{
+
+height:120px;
+
+}
+
+}
+
+  
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.tastr-hero-logo{
+
+height:90px;
+
+}
+
+}
+
+/* FIX HEADER OVERLAP */
+padding-top:110px;
+
+}
 
 /* =========================
-   CONTAINER SYSTEM
+   ENGINE CANVAS LAYER
 ========================= */
 
-.container{
-
-max-width:var(--container);
-
-margin:auto;
-
-padding-left:24px;
-padding-right:24px;
-
-}
-
-
-/* =========================
-   NAVBAR (FIXED PROPER)
-========================= */
-
-.navbar{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-height:72px;
-
-display:flex;
-align-items:center;
-
-background:rgba(255,255,255,0.7);
-
-backdrop-filter:blur(20px);
-
-border-bottom:1px solid var(--border);
-
-z-index:1000;
-
-}
-
-
-.nav-inner{
-
-display:flex;
-
-align-items:center;
-justify-content:space-between;
-
-width:100%;
-
-}
-
-
-.logo{
-
-font-weight:800;
-
-font-size:20px;
-
-background:linear-gradient(90deg,var(--primary),var(--accent));
--webkit-background-clip:text;
-color:transparent;
-
-}
-
-
-/* NAV LINKS */
-
-.nav-links{
-
-display:flex;
-gap:32px;
-
-}
-
-.nav-links a{
-
-text-decoration:none;
-
-color:var(--text-soft);
-
-font-weight:500;
-
-transition:.3s;
-
-}
-
-.nav-links a:hover{
-
-color:var(--primary);
-
-}
-
-
-/* =========================
-   HERO SECTION (PERFECT CENTER)
-========================= */
-
-.hero{
-
-padding-top:140px;
-padding-bottom:120px;
-
-}
-
-
-.hero-inner{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-text-align:center;
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-
-.hero h1{
-
-font-size:64px;
-
-font-weight:800;
-
-letter-spacing:-1px;
-
-line-height:1.1;
-
-background:linear-gradient(90deg,var(--primary),var(--accent));
--webkit-background-clip:text;
-color:transparent;
-
-}
-
-
-.hero p{
-
-margin-top:24px;
-
-font-size:20px;
-
-color:var(--text-soft);
-
-}
-
-
-.hero-buttons{
-
-margin-top:40px;
-
-display:flex;
-gap:16px;
-
-flex-wrap:wrap;
-justify-content:center;
-
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-
-padding:14px 28px;
-
-border-radius:10px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.3s;
-
-display:inline-block;
-
-}
-
-
-.btn-primary{
-
-background:linear-gradient(90deg,var(--primary),var(--accent));
-
-color:white;
-
-box-shadow:0 10px 30px rgba(37,99,235,0.2);
-
-}
-
-.btn-primary:hover{
-
-transform:translateY(-2px);
-
-box-shadow:0 20px 40px rgba(37,99,235,0.3);
-
-}
-
-
-.btn-secondary{
-
-border:1px solid var(--border);
-
-color:var(--text);
-
-}
-
-.btn-secondary:hover{
-
-border-color:var(--primary);
-
-color:var(--primary);
-
-}
-
-
-/* =========================
-   SECTION
-========================= */
-
-.section{
-
-padding-top:100px;
-padding-bottom:100px;
-
-}
-
-
-.section-header{
-
-text-align:center;
-
-max-width:700px;
-
-margin:auto;
-
-margin-bottom:60px;
-
-}
-
-
-.section-header h2{
-
-font-size:40px;
-
-margin-bottom:16px;
-
-}
-
-
-.section-header p{
-
-color:var(--text-soft);
-
-}
-
-
-/* =========================
-   CARD GRID (FIX ALIGNMENT)
-========================= */
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:32px;
-
-}
-
-
-.card{
-
-background:white;
-
-padding:32px;
-
-border-radius:var(--radius);
-
-border:1px solid var(--border);
-
-transition:.3s;
-
-cursor:pointer;
-
-}
-
-.card:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-
-border-color:var(--primary);
-
-}
-
-
-.card h3{
-
-margin-bottom:10px;
-
-font-size:22px;
-
-}
-
-
-.card p{
-
-color:var(--text-soft);
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-
-border-top:1px solid var(--border);
-
-padding-top:40px;
-padding-bottom:40px;
-
-text-align:center;
-
-color:var(--text-soft);
-
-}
-
-
-/* =========================
-   FUTURISTIC GRADIENT BACKGROUND
-========================= */
-
-.bg-gradient{
+#eleviora-engine{
 
 position:fixed;
 
@@ -402,64 +167,899 @@ height:100%;
 
 z-index:-1;
 
-background:
-
-radial-gradient(circle at 10% 20%, rgba(37,99,235,0.08), transparent),
-radial-gradient(circle at 80% 80%, rgba(6,182,212,0.08), transparent);
+pointer-events:none;
 
 }
 
 
 /* =========================
-   RESPONSIVE
+   CONTAINER SYSTEM
+========================= */
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:0 20px;
+
+}
+
+/* =========================
+   FLOATING HEADER
+========================= */
+
+.ultra-header{
+
+position:fixed;
+
+top:20px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:92%;
+max-width:1200px;
+
+z-index:1000;
+
+padding:14px 24px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.75),
+rgba(255,255,255,0.45)
+);
+
+backdrop-filter:blur(28px);
+
+border-radius:16px;
+
+border:1px solid var(--border-glass);
+
+box-shadow:var(--shadow-soft);
+
+transition:var(--transition);
+
+}
+
+
+/* HEADER SHRINK */
+
+.ultra-header.scrolled{
+
+padding:10px 20px;
+
+box-shadow:var(--shadow-premium);
+
+}
+
+
+/* HEADER INNER */
+
+.ultra-header-inner{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+
+/* BRAND */
+
+.ultra-brand{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+cursor:pointer;
+
+}
+
+.ultra-logo{
+
+height:40px;
+
+transition:var(--transition);
+
+}
+
+.ultra-header.scrolled .ultra-logo{
+
+height:32px;
+
+}
+
+
+/* BRAND TEXT */
+
+.ultra-brand-title{
+
+font-size:18px;
+
+font-weight:700;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+.ultra-brand-sub{
+
+font-size:10px;
+
+letter-spacing:3px;
+
+color:var(--primary);
+
+opacity:0.9;
+
+}
+
+
+/* NAVIGATION */
+
+.ultra-nav{
+
+display:flex;
+
+gap:32px;
+
+}
+
+.ultra-nav a{
+
+font-size:15px;
+
+font-weight:600;
+
+color:var(--text-main);
+
+text-decoration:none;
+
+position:relative;
+
+transition:var(--transition);
+
+}
+
+.ultra-nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+height:2px;
+
+background:var(--primary);
+
+transition:var(--transition);
+
+}
+
+.ultra-nav a:hover::after,
+.ultra-nav a.active::after{
+
+width:100%;
+
+}
+
+
+/* =========================
+   HERO SYSTEM
+========================= */
+
+.hero{
+
+padding-top:180px;
+padding-bottom:140px;
+
+position:relative;
+
+}
+
+.hero h1{
+
+font-size:64px;
+
+font-weight:800;
+
+line-height:1.05;
+
+letter-spacing:-1.5px;
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#2563eb
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+.hero p{
+
+margin-top:24px;
+
+font-size:18px;
+
+max-width:600px;
+
+color:var(--text-soft);
+
+}
+
+
+/* =========================
+   SECTION SYSTEM
+========================= */
+
+.section{
+
+padding:70px 0;
+
+position:relative;
+
+}
+
+.section-header{
+
+margin-bottom:60px;
+
+}
+
+.section-header h2{
+
+font-size:40px;
+
+font-weight:800;
+
+letter-spacing:-0.5px;
+
+}
+
+.section-header p{
+
+margin-top:12px;
+
+font-size:18px;
+
+color:var(--text-soft);
+
+}
+
+
+/* =========================
+   GLASS CARD SYSTEM
+========================= */
+
+.glass-card{
+
+padding:32px;
+
+border-radius:var(--radius);
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.75),
+rgba(255,255,255,0.55)
+);
+
+backdrop-filter:blur(24px);
+
+border:1px solid var(--border-glass);
+
+box-shadow:var(--shadow-soft);
+
+transition:var(--transition);
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-premium);
+
+}
+
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid{
+
+display:grid;
+
+gap:28px;
+
+}
+
+.grid-3{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.grid-2{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+
+.btn{
+
+display:inline-block;
+
+padding:14px 26px;
+
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:var(--transition);
+
+box-shadow:
+0 10px 30px rgba(37,99,235,0.3);
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+padding:80px 0;
+
+text-align:center;
+
+color:var(--text-soft);
+
+font-size:14px;
+
+}
+
+
+/* =========================
+   MOBILE SYSTEM
+========================= */
+
+@media(max-width:1000px){
+
+.hero h1{
+
+font-size:44px;
+
+}
+
+.section{
+
+padding-top:80px;
+padding-bottom:80px;
+
+}
+
+.grid-3{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+padding-top:140px;
+padding-bottom:100px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.ultra-header{
+
+width:94%;
+
+}
+
+.ultra-nav{
+
+gap:16px;
+
+}
+
+}
+
+/* =========================
+   HERO GLASS PANELS
+========================= */
+
+.hero-glass{
+
+position:absolute;
+
+border-radius:24px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.4),
+rgba(255,255,255,0.1)
+);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+animation:floatGlass 12s infinite ease-in-out;
+
+}
+
+.hero-glass-1{
+
+width:220px;
+height:220px;
+
+top:140px;
+right:12%;
+
+}
+
+.hero-glass-2{
+
+width:140px;
+height:140px;
+
+top:360px;
+right:22%;
+
+animation-delay:3s;
+
+}
+
+.hero-glass-3{
+
+width:180px;
+height:180px;
+
+top:260px;
+right:6%;
+
+animation-delay:6s;
+
+}
+/* =========================
+   GRADIENT MESH LAYER
+========================= */
+
+#eleviora-mesh{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-2;
+
+pointer-events:none;
+
+}
+
+/* =========================
+   HERO ELITE CONTENT
+========================= */
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:999px;
+
+background:rgba(37,99,235,0.08);
+
+color:#2563eb;
+
+font-weight:600;
+
+font-size:14px;
+
+margin-bottom:20px;
+
+}
+
+.hero-title{
+
+font-size:64px;
+
+font-weight:800;
+
+line-height:1.05;
+
+letter-spacing:-1.5px;
+
+margin-bottom:24px;
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#2563eb
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+}
+
+.hero-description{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#64748b;
+
+max-width:720px;
+
+margin-bottom:30px;
+
+}
+
+.hero-actions{
+
+display:flex;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+}
+
+
+/* =========================
+   ELITE CARD SYSTEM
+========================= */
+
+.elite-card{
+
+padding:40px;
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.card-label{
+
+font-size:13px;
+
+color:#2563eb;
+
+font-weight:600;
+
+margin-bottom:8px;
+
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.btn-secondary{
+
+background:transparent;
+
+border:1px solid rgba(37,99,235,0.2);
+
+color:#2563eb;
+
+}
+
+
+/* =========================
+   MOBILE OPTIMIZATION
 ========================= */
 
 @media(max-width:768px){
 
-.hero h1{
+.hero-title{
 
-font-size:42px;
-
-}
-
-.nav-links{
-
-display:none;
+font-size:36px;
 
 }
 
+.hero-description{
+
+font-size:16px;
+
 }
 
+.elite-card{
 
-/* ===========================
-   HORIZONTAL SCROLL ANIMATION
-=========================== */
+padding:24px;
 
-.brand-scroll-container{
+}
 
-overflow:hidden;
+}
 
-width:100%;
+/* ============================================
+   ELITE FLOWCHART SYSTEM
+============================================ */
+
+.flowchart{
+
+display:flex;
+
+flex-direction:column;
+
+gap:40px;
+
+margin-top:40px;
+
+position:relative;
+
+}
+
+.flow-row{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.flow-box{
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.7),
+rgba(255,255,255,0.4)
+);
+
+backdrop-filter:blur(20px);
+
+border-radius:16px;
+
+padding:18px 28px;
+
+font-weight:600;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08);
+
+border:1px solid rgba(255,255,255,0.6);
+
+}
+
+.flow-line{
+
+width:60px;
+height:2px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#06b6d4
+);
+
+}
+
+/* SCROLL REVEAL */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:all 1s cubic-bezier(.16,1,.3,1);
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ============================================
+   ROADMAP SYSTEM
+============================================ */
+
+.roadmap{
 
 margin-top:60px;
 
+position:relative;
+
+}
+
+.roadmap-line{
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:linear-gradient(
+180deg,
+#2563eb,
+#06b6d4
+);
+
+transform:translateX(-50%);
+
+}
+
+.roadmap-item{
+
+position:relative;
+
+width:50%;
+
+padding:20px 40px;
+
+margin-bottom:40px;
+
+}
+
+.roadmap-item.left{
+
+left:0;
+
+text-align:right;
+
+}
+
+.roadmap-item.right{
+
+left:50%;
+
+}
+
+.roadmap-card{
+
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(20px);
+
+padding:20px;
+
+border-radius:14px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
 }
 
 
-.brand-scroll-track{
+/* ============================================
+   SLIDING BRAND SHOWCASE
+============================================ */
+
+.brand-showcase{
+
+margin-top:80px;
+
+overflow:hidden;
+
+}
+
+.brand-track{
 
 display:flex;
 
 gap:30px;
 
-width:max-content;
-
-animation: scrollBrands 30s linear infinite;
+animation:brandScroll 40s linear infinite;
 
 }
 
+.brand-panel{
 
-@keyframes scrollBrands{
+min-width:320px;
+
+height:200px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.6),
+rgba(255,255,255,0.3)
+);
+
+border-radius:16px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.brand-panel img{
+
+max-width:140px;
+
+}
+
+@keyframes brandScroll{
 
 0%{
 
@@ -476,34 +1076,1498 @@ transform:translateX(-50%);
 }
 
 
-/* PREMIUM CARD */
+/* ============================================
+   EXPANSION SECTION
+============================================ */
 
-.premium-brand-card{
+.expansion-grid{
 
-min-width:320px;
+display:grid;
 
-background:white;
+grid-template-columns:repeat(2,1fr);
 
-border-radius:20px;
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.expansion-card{
 
 padding:30px;
 
-cursor:pointer;
+border-radius:16px;
 
-border:1px solid var(--border);
+background:rgba(255,255,255,0.7);
 
-transition:0.4s;
+backdrop-filter:blur(20px);
 
-box-shadow:0 20px 60px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 }
 
 
-.premium-brand-card:hover{
+/* ============================================
+   MOBILE OPTIMIZATION
+============================================ */
 
-transform:translateY(-8px);
+@media(max-width:768px){
 
-box-shadow:0 40px 100px rgba(37,99,235,0.2);
+.roadmap-item{
+
+width:100%;
+
+left:0 !important;
+
+text-align:left !important;
+
+}
+
+.roadmap-line{
+
+left:10px;
+
+}
+
+.expansion-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.brand-panel{
+
+min-width:240px;
+
+}
+
+}
+
+/* ============================================
+   ELITE SLIDING BRAND STORY SYSTEM
+============================================ */
+
+.brand-story{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:60px;
+
+margin-top:120px;
+
+margin-bottom:120px;
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:all 1s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.brand-story.visible{
+
+opacity:1;
+
+transform:translateY(0px);
+
+}
+
+
+.brand-story.reverse{
+
+flex-direction:row-reverse;
+
+}
+
+
+.brand-story-logo{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+
+.brand-story-logo img{
+
+width:320px;
+
+max-width:100%;
+
+filter:drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+
+transition:transform 1s ease;
+
+}
+
+
+.brand-story.visible .brand-story-logo img{
+
+transform:translateX(0px);
+
+}
+
+
+.brand-story-text{
+
+flex:1;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.7),
+rgba(255,255,255,0.4)
+);
+
+backdrop-filter:blur(20px);
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.08);
+
+}
+
+
+.brand-story-text h2{
+
+font-size:32px;
+
+margin-bottom:16px;
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#2563eb
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+.brand-story-text p{
+
+font-size:17px;
+
+line-height:1.7;
+
+color:#64748b;
+
+}
+
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media(max-width:900px){
+
+.brand-story{
+
+flex-direction:column !important;
+
+gap:30px;
+
+}
+
+.brand-story-logo img{
+
+width:200px;
+
+}
+
+.brand-story-text{
+
+padding:24px;
+
+}
+
+}
+
+/* ============================================
+   ELITE HORIZONTAL ROADMAP TIMELINE
+============================================ */
+
+.roadmap-horizontal{
+
+margin-top:100px;
+
+overflow-x:auto;
+
+padding-bottom:20px;
+
+}
+
+.roadmap-track{
+
+display:flex;
+
+gap:40px;
+
+min-width:900px;
+
+position:relative;
+
+padding-top:40px;
+
+}
+
+.roadmap-track::before{
+
+content:"";
+
+position:absolute;
+
+top:60px;
+
+left:0;
+
+right:0;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#06b6d4
+);
+
+}
+
+.roadmap-node{
+
+min-width:260px;
+
+position:relative;
+
+}
+
+.roadmap-dot{
+
+width:18px;
+height:18px;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#06b6d4
+);
+
+position:absolute;
+
+top:52px;
+
+left:0;
+
+}
+
+.roadmap-content{
+
+margin-top:40px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.7),
+rgba(255,255,255,0.4)
+);
+
+backdrop-filter:blur(20px);
+
+padding:20px;
+
+border-radius:16px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+
+transition:transform 0.4s ease;
+
+}
+
+.roadmap-content:hover{
+
+transform:translateY(-6px);
+
+}
+
+.roadmap-year{
+
+font-weight:700;
+
+color:#2563eb;
+
+margin-bottom:6px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.roadmap-track{
+
+flex-direction:column;
+
+min-width:0;
+
+}
+
+.roadmap-track::before{
+
+display:none;
+
+}
+
+.roadmap-dot{
+
+position:relative;
+
+margin-bottom:10px;
+
+}
+
+}
+
+/* ============================================
+   PLATFORM ARCHITECTURE DIAGRAM
+============================================ */
+
+.architecture{
+
+margin-top:100px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:40px;
+
+position:relative;
+
+}
+
+.arch-row{
+
+display:flex;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.arch-box{
+
+padding:18px 28px;
+
+border-radius:16px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.7),
+rgba(255,255,255,0.4)
+);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+
+font-weight:600;
+
+min-width:200px;
+
+text-align:center;
+
+transition:all 0.4s ease;
+
+}
+
+.arch-box:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+}
+
+.arch-line{
+
+width:2px;
+
+height:40px;
+
+background:linear-gradient(
+180deg,
+#2563eb,
+#06b6d4
+);
+
+}
+
+.arch-line-horizontal{
+
+height:2px;
+
+width:60px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#06b6d4
+);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.arch-row{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+}
+
+
+/* ============================================
+   LINKEDIN BUTTON
+============================================ */
+
+.linkedin-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 18px;
+
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+#0077b5,
+#0a66c2
+);
+
+color:white;
+
+font-weight:600;
+
+font-size:14px;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 25px rgba(10,102,194,0.3);
+
+transition:all 0.3s ease;
+
+}
+
+.linkedin-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 15px 35px rgba(10,102,194,0.4);
+
+}
+
+
+.linkedin-icon{
+
+width:18px;
+
+height:18px;
+
+}
+
+/* ============================================
+   FOUNDERS GRID LAYOUT
+============================================ */
+
+.founders-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+
+/* MOBILE STACK */
+
+@media(max-width:768px){
+
+.founders-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+/* ============================================
+   FOUNDER CARD — FINAL CLEAN VERSION
+============================================ */
+
+.founder-card{
+
+position:relative;
+
+padding:42px;
+
+border-radius:22px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,0.75),
+rgba(255,255,255,0.45)
+);
+
+backdrop-filter:blur(30px);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.08);
+
+overflow:hidden;
+
+transform-style:preserve-3d;
+
+transition:
+transform 0.5s ease,
+box-shadow 0.5s ease;
+
+}
+
+.founder-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:-1px;
+
+border-radius:22px;
+
+padding:1px;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#06b6d4,
+#2563eb
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:0.6;
+
+animation:glowRotate 6s linear infinite;
+
+}
+
+.founder-card:hover{
+
+transform:
+translateY(-12px)
+rotateX(3deg)
+rotateY(-3deg);
+
+box-shadow:
+0 40px 100px rgba(37,99,235,0.2);
+
+}
+
+
+/* ============================================
+   FOUNDER NAME PREMIUM
+============================================ */
+
+.founder-name{
+
+font-size:30px;
+
+font-weight:700;
+
+margin-bottom:6px;
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#2563eb,
+#06b6d4
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+/* ============================================
+   ROLE STYLE
+============================================ */
+
+.founder-role{
+
+font-size:15px;
+
+font-weight:600;
+
+color:#2563eb;
+
+margin-bottom:18px;
+
+letter-spacing:0.4px;
+
+}
+
+
+/* ============================================
+   DESCRIPTION
+============================================ */
+
+.founder-description{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#64748b;
+
+margin-bottom:28px;
+
+}
+
+
+/* ============================================
+   LINKEDIN BUTTON ULTRA PREMIUM
+============================================ */
+
+.linkedin-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:13px 20px;
+
+border-radius:14px;
+
+background:linear-gradient(
+135deg,
+#0077b5,
+#0a66c2
+);
+
+color:white;
+
+font-weight:600;
+
+font-size:14px;
+
+text-decoration:none;
+
+box-shadow:
+0 15px 35px rgba(10,102,194,0.35);
+
+transition:all 0.3s ease;
+
+}
+
+.linkedin-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 25px 50px rgba(10,102,194,0.5);
+
+}
+
+
+.linkedin-icon{
+
+width:20px;
+
+height:20px;
+
+}
+
+/* CLEAN LOGO SHOWCASE */
+
+.clean-showcase{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:80px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.brand-logo{
+
+height:70px;
+
+opacity:0.9;
+
+transition:all 0.4s ease;
+
+filter:drop-shadow(0 10px 20px rgba(0,0,0,0.08));
+
+}
+
+.brand-logo:hover{
+
+opacity:1;
+
+transform:scale(1.08);
+
+}
+
+@media(max-width:768px){
+
+.brand-logo{
+
+height:50px;
+
+}
+
+}
+
+/* ELITE FOOTER */
+
+.elite-footer{
+
+padding:50px 0 20px;
+
+background:rgba(255,255,255,0.6);
+
+backdrop-filter:blur(20px);
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:40px;
+
+}
+
+.footer-title{
+
+font-weight:600;
+
+margin-bottom:10px;
+
+}
+
+.footer-grid a{
+
+display:block;
+
+margin-bottom:6px;
+
+color:#475569;
+
+text-decoration:none;
+
+}
+
+.footer-brand{
+
+font-weight:700;
+
+font-size:18px;
+
+margin-bottom:10px;
+
+}
+
+.footer-desc{
+
+color:#64748b;
+
+}
+
+.social-icons{
+
+display:flex;
+
+gap:14px;
+
+margin-top:10px;
+
+}
+
+.social-icons img{
+
+width:22px;
+
+opacity:0.7;
+
+transition:0.3s;
+
+}
+
+.social-icons img:hover{
+
+opacity:1;
+
+transform:scale(1.1);
+
+}
+
+.footer-bottom{
+
+margin-top:30px;
+
+text-align:center;
+
+color:#64748b;
+
+font-size:14px;
+
+}
+
+@media(max-width:768px){
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+/* ============================================
+   PLATFORM ECOSYSTEM STRUCTURE
+============================================ */
+
+.ecosystem-section{
+
+text-align:center;
+
+}
+
+.ecosystem-core-logo{
+
+height:80px;
+
+margin-bottom:20px;
+
+filter:drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+
+}
+
+.ecosystem-line{
+
+width:2px;
+
+height:60px;
+
+margin:20px auto;
+
+background:linear-gradient(
+180deg,
+#2563eb,
+#06b6d4
+);
+
+}
+
+.ecosystem-platforms{
+
+display:flex;
+
+justify-content:center;
+
+gap:80px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+}
+
+.ecosystem-platform img{
+
+height:60px;
+
+margin-bottom:10px;
+
+}
+
+.ecosystem-label{
+
+font-size:14px;
+
+color:#64748b;
+
+}
+
+/* ============================================
+   ULTRA ELITE ECOSYSTEM LOGOS SYSTEM
+============================================ */
+
+.ecosystem-section{
+
+padding-top:60px;
+padding-bottom:60px;
+
+}
+
+.ecosystem-logos{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:180px;
+
+flex-wrap:wrap;
+
+perspective:1200px;
+
+}
+
+
+/* LARGE LOGOS */
+
+.ecosystem-logo{
+
+height:160px;
+
+max-width:320px;
+
+object-fit:contain;
+
+transition:
+
+transform 0.6s cubic-bezier(.16,1,.3,1),
+filter 0.6s ease;
+
+will-change:transform;
+
+filter:
+
+drop-shadow(0 30px 60px rgba(0,0,0,0.18));
+
+}
+
+
+/* HOVER DEPTH EFFECT */
+
+.ecosystem-logo:hover{
+
+transform:
+
+scale(1.15)
+translateY(-10px);
+
+filter:
+
+drop-shadow(0 40px 80px rgba(37,99,235,0.35));
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.ecosystem-logos{
+
+gap:80px;
+
+}
+
+.ecosystem-logo{
+
+height:95px;
+
+}
+
+}
+
+/* ============================================
+   ECOSYSTEM LOGO HORIZONTAL SCROLL ENGINE
+   Perfect level scrolling — no vertical shift
+============================================ */
+
+(function(){
+
+const track = document.querySelector(".ecosystem-track");
+
+if(!track) return;
+
+/* duplicate logos for seamless infinite scroll */
+
+track.innerHTML += track.innerHTML;
+
+let position = 0;
+
+const speed = 0.4; // adjust speed here
+
+function animate(){
+
+position -= speed;
+
+if(Math.abs(position) >= track.scrollWidth / 2){
+
+position = 0;
+
+}
+
+track.style.transform =
+`translateX(${position}px)`;
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+})();
+
+
+/* TRACK */
+
+.ecosystem-track{
+
+display:flex;
+
+align-items:center;
+
+gap:160px;
+
+width:max-content;
+
+animation:ecosystemScroll 25s linear infinite;
+
+}
+
+
+/* LOGO SIZE */
+
+.ecosystem-logo{
+
+height:140px;
+
+object-fit:contain;
+
+filter:
+drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+
+opacity:0.95;
+
+transition:all 0.4s ease;
+
+}
+
+.ecosystem-logo:hover{
+
+transform:scale(1.12);
+
+opacity:1;
+
+}
+
+
+/* INFINITE SCROLL ANIMATION */
+
+@keyframes ecosystemScroll{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.ecosystem-track{
+
+gap:80px;
+
+}
+
+.ecosystem-logo{
+
+height:80px;
+
+}
+
+}
+
+/* HEADER LOGO ONLY */
+
+.ultra-logo-large{
+
+height:52px;
+
+transition:all 0.35s ease;
+
+}
+
+.ultra-header.scrolled .ultra-logo-large{
+
+height:42px;
+
+}
+
+/* ============================================
+   TASTR HERO LOGO RESPONSIVE SYSTEM
+============================================ */
+
+/* DESKTOP */
+
+.tastr-hero-logo{
+
+height:260px;
+
+max-width:100%;
+
+object-fit:contain;
+
+filter:
+drop-shadow(0 40px 80px rgba(0,0,0,0.25));
+
+transition:all 0.4s ease;
+
+}
+
+
+/* LARGE DESKTOP */
+
+@media(min-width:1400px){
+
+.tastr-hero-logo{
+
+height:320px;
+
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.tastr-hero-logo{
+
+height:180px;
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.tastr-hero-logo{
+
+height:120px;
+
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.tastr-hero-logo{
+
+height:90px;
+
+}
+
+}
+
+.codestep-hero-logo{
+
+height:260px;
+
+max-width:100%;
+
+object-fit:contain;
+
+filter:drop-shadow(0 40px 80px rgba(0,0,0,0.25));
+
+}
+
+@media(max-width:768px){
+
+.codestep-hero-logo{
+
+height:120px;
+
+}
+
+}
+
+.vayuara-hero-logo{
+
+height:260px;
+
+max-width:100%;
+
+filter:drop-shadow(0 40px 80px rgba(0,0,0,0.25));
+
+}
+
+@media(max-width:768px){
+
+.vayuara-hero-logo{
+
+height:120px;
+
+}
+
+}
+
+/* =========================
+   ECOSYSTEM LOGO SCROLL
+========================= */
+
+.ecosystem-scroll {
+
+overflow: hidden;
+
+width: 100%;
+
+position: relative;
+
+padding: 40px 0;
+
+}
+
+.ecosystem-track {
+
+display: flex;
+
+gap: 80px;
+
+align-items: center;
+
+width: max-content;
+
+will-change: transform;
+
+}
+
+.ecosystem-logo {
+
+height: 72px;
+
+width: auto;
+
+flex-shrink: 0;
+
+display: block;
+
+transition: transform 0.3s ease;
+
+}
+
+.ecosystem-logo:hover {
+
+transform: scale(1.08);
+
+}
+
+/* ===============================
+OUR BRANDS DROPDOWN
+=============================== */
+
+.nav-brands{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.brands-trigger{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+cursor:pointer;
+
+opacity:0.85;
+
+transition:all .3s ease;
+
+}
+
+.brands-trigger:hover{
+
+opacity:1;
+
+}
+
+
+/* DROPDOWN */
+
+.brands-dropdown{
+
+position:absolute;
+
+top:40px;
+
+left:-40px;
+
+width:320px;
+
+padding:12px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.25);
+
+opacity:0;
+
+transform:translateY(10px);
+
+pointer-events:none;
+
+transition:all .35s cubic-bezier(.16,1,.3,1);
+
+z-index:1000;
+
+}
+
+
+/* SHOW */
+
+.nav-brands:hover .brands-dropdown{
+
+opacity:1;
+
+transform:translateY(0);
+
+pointer-events:auto;
+
+}
+
+
+/* BRAND ITEM */
+
+.brand-item{
+
+display:flex;
+
+gap:12px;
+
+padding:12px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:all .3s ease;
+
+align-items:center;
+
+}
+
+.brand-item:hover{
+
+background:rgba(255,255,255,0.08);
+
+transform:translateX(4px);
+
+}
+
+
+/* LOGO */
+
+.brand-item img{
+
+width:44px;
+
+height:44px;
+
+object-fit:contain;
 
 }
 
@@ -512,706 +2576,26 @@ box-shadow:0 40px 100px rgba(37,99,235,0.2);
 
 .brand-name{
 
-font-size:22px;
-
-font-weight:800;
-
-text-align:center;
-
-margin-bottom:10px;
-
-}
-
-
-.brand-desc{
-
-text-align:center;
-
-color:var(--text-soft);
-
-}
-
-
-/* PREMIUM TEXT */
-
-.brand-name{
-
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"SF Pro Display",
-Inter,
-sans-serif;
-
-font-size:26px;
-
-font-weight:700;
-
-letter-spacing:-0.3px;
-
-text-align:center;
-
-margin-bottom:12px;
-
-background: linear-gradient(
-180deg,
-#0f172a,
-#334155
-);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-
-.brand-desc{
-
-font-size:15.5px;
-
-line-height:1.6;
-
-text-align:center;
-
-color:#475569;
-
-}
-
-/* ===============================
-   ULTRA PREMIUM APPLE HEADER FINAL
-=============================== */
-
-.ultra-header{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-z-index:1000;
-
-padding:18px 0;
-
-background: linear-gradient(
-135deg,
-rgba(255,255,255,0.7),
-rgba(255,255,255,0.3)
-);
-
-backdrop-filter: blur(24px);
-
--webkit-backdrop-filter: blur(24px);
-
-border-bottom:1px solid rgba(255,255,255,0.25);
-
-box-shadow:
-0 10px 30px rgba(0,0,0,0.06);
-
-transition: all 0.35s ease;
-
-}
-
-
-/* SHRINK ON SCROLL */
-
-.ultra-header.scrolled{
-
-padding:10px 0;
-
-background: linear-gradient(
-135deg,
-rgba(255,255,255,0.85),
-rgba(255,255,255,0.4)
-);
-
-box-shadow:
-0 15px 40px rgba(0,0,0,0.12);
-
-}
-
-
-/* INNER */
-
-.ultra-header-inner{
-
-max-width:1200px;
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 24px;
-
-}
-
-
-/* BRAND */
-
-.ultra-brand{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-}
-
-
-/* LOGO */
-
-.ultra-logo{
-
-height:44px;
-
-transition:0.3s;
-
-}
-
-.ultra-header.scrolled .ultra-logo{
-
-height:36px;
-
-}
-
-
-/* TITLE — ULTRA PREMIUM FONT */
-/* ULTRA PREMIUM BLUE TITLE */
-
-.ultra-brand-title{
-
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"SF Pro Display",
-Inter,
-system-ui;
-
-font-size:17px;
-
-font-weight:700;
-
-letter-spacing:-0.2px;
-
-/* PREMIUM BLUE GRADIENT */
-background: linear-gradient(
-135deg,
-#2563eb 0%,
-#06b6d4 50%,
-#2563eb 100%
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-background-clip:text;
-
-color:transparent;
-
-}
-
-/* SUBTITLE */
-
-.ultra-brand-sub{
-
-font-family:
--apple-system,
-BlinkMacSystemFont,
-Inter;
-
-font-size:11px;
-
 font-weight:600;
-
-letter-spacing:2.4px;
-
-color:#2563eb;
-
-opacity:0.85;
-
-}
-
-
-/* NAV */
-
-.ultra-nav{
-
-display:flex;
-
-gap:32px;
-
-}
-
-
-.ultra-nav a{
-
-font-family:
-
--apple-system,
-BlinkMacSystemFont,
-"SF Pro Display",
-Inter;
-
-font-size:15px;
-
-font-weight:600;
-
-color:#0f172a;
-
-text-decoration:none;
-
-position:relative;
-
-transition:0.3s;
-
-}
-
-
-/* ACTIVE LINK */
-
-.ultra-nav a.active{
-
-color:#2563eb;
-
-}
-
-
-/* UNDERLINE */
-
-.ultra-nav a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-bottom:-6px;
-
-width:0;
-height:2px;
-
-background:#2563eb;
-
-transition:0.3s;
-
-}
-
-.ultra-nav a:hover::after,
-.ultra-nav a.active::after{
-
-width:100%;
-
-}
-
-
-/* BODY OFFSET */
-
-body{
-
-padding-top:90px;
-
-}
-
-
-/* =====================================
-   WHATSAPP FLOAT BUTTON — ULTRA PREMIUM
-===================================== */
-
-.wa-widget{
-
-position:fixed;
-
-bottom:28px;
-
-right:28px;
-
-z-index:9999;
-
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"SF Pro Display",
-Inter,
-system-ui;
-
-}
-
-
-/* FLOAT BUTTON */
-
-.wa-float{
-
-position:relative;
-
-width:64px;
-height:64px;
-
-border-radius:22px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-cursor:pointer;
-
-/* GLASS + GLOSS */
-background: linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-box-shadow:
-
-0 10px 30px rgba(37,211,102,0.4),
-0 0 0 0 rgba(37,211,102,0.7);
-
-transition: all 0.3s ease;
-
-overflow:hidden;
-
-}
-
-
-/* HOVER */
-
-.wa-float:hover{
-
-transform: translateY(-4px) scale(1.08);
-
-box-shadow:
-0 20px 50px rgba(37,211,102,0.6);
-
-}
-
-
-/* =====================================
-   BUBBLE PULSE ANIMATION
-===================================== */
-
-.wa-float::before{
-
-content:"";
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-border-radius:22px;
-
-background:rgba(37,211,102,0.5);
-
-animation: waBubble 2.5s infinite;
-
-z-index:-1;
-
-}
-
-
-@keyframes waBubble{
-
-0%{
-
-transform: scale(1);
-
-opacity:0.6;
-
-}
-
-70%{
-
-transform: scale(1.8);
-
-opacity:0;
-
-}
-
-100%{
-
-opacity:0;
-
-}
-
-}
-
-
-/* =====================================
-   CHAT POPUP — APPLE GLASS STYLE
-===================================== */
-
-.wa-chat-box{
-
-position:absolute;
-
-bottom:80px;
-
-right:0;
-
-width:340px;
-
-height:480px;
-
-display:none;
-
-flex-direction:column;
-
-border-radius:22px;
-
-/* GLASS EFFECT */
-
-background: linear-gradient(
-135deg,
-rgba(255,255,255,0.85),
-rgba(255,255,255,0.65)
-);
-
-backdrop-filter: blur(30px);
-
--webkit-backdrop-filter: blur(30px);
-
-border:1px solid rgba(255,255,255,0.4);
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,0.18),
-inset 0 1px 0 rgba(255,255,255,0.6);
-
-overflow:hidden;
-
-animation: waPopup 0.3s ease;
-
-}
-
-
-/* POPUP ANIMATION */
-
-@keyframes waPopup{
-
-from{
-
-transform: translateY(20px) scale(0.95);
-
-opacity:0;
-
-}
-
-to{
-
-transform: translateY(0) scale(1);
-
-opacity:1;
-
-}
-
-}
-
-
-/* =====================================
-   HEADER
-===================================== */
-
-.wa-header{
-
-padding:14px;
-
-background: linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
-
-color:white;
-
-font-weight:600;
-
-display:flex;
-align-items:center;
-
-}
-
-
-.wa-close{
-
-margin-left:auto;
-
-cursor:pointer;
-
-font-size:20px;
-
-opacity:0.8;
-
-}
-
-.wa-close:hover{
-
-opacity:1;
-
-}
-
-
-/* =====================================
-   CHAT BODY
-===================================== */
-
-.wa-body{
-
-flex:1;
-
-padding:14px;
-
-overflow:auto;
-
-background:transparent;
-
-}
-
-
-/* MESSAGE BUBBLE */
-
-.wa-msg{
-
-background:white;
-
-padding:10px 14px;
-
-border-radius:14px;
-
-margin-bottom:10px;
-
-display:inline-block;
-
-box-shadow:
-0 4px 14px rgba(0,0,0,0.08);
-
-}
-
-
-/* PROMPT BUTTON */
-
-.wa-prompt{
-
-padding:10px;
-
-margin-bottom:8px;
-
-border-radius:12px;
-
-cursor:pointer;
-
-background: rgba(255,255,255,0.7);
-
-border:1px solid rgba(255,255,255,0.6);
-
-transition: all 0.2s ease;
-
-}
-
-.wa-prompt:hover{
-
-transform: translateX(6px);
-
-background: rgba(255,255,255,0.95);
-
-}
-
-
-/* =====================================
-   FOOTER INPUT
-===================================== */
-
-.wa-footer{
-
-display:flex;
-
-border-top:1px solid rgba(0,0,0,0.06);
-
-background:rgba(255,255,255,0.6);
-
-}
-
-
-.wa-footer input{
-
-flex:1;
-
-padding:12px;
-
-border:none;
-
-outline:none;
-
-background:transparent;
 
 font-size:15px;
 
 }
 
+.brand-desc{
 
-.wa-footer button{
+font-size:12px;
 
-background:#25D366;
-
-color:white;
-
-border:none;
-
-padding:12px 18px;
-
-cursor:pointer;
-
-font-weight:600;
-
-transition:0.2s;
+opacity:.6;
 
 }
 
-.wa-footer button:hover{
+@media (max-width:768px){
 
-background:#128C7E;
+.brands-dropdown{
 
-}
-
-/* ===============================
-   PREMIUM CONNECTING DOTS
-=============================== */
-
-#premiumDots{
-
-position:fixed;
-
-top:0;
-
-right:0;
-
-width:420px;
-
-height:100%;
-
-z-index:-1;
-
-opacity:0.6;
-
-pointer-events:none;
-
-}
-
-
-/* MOBILE DISABLE */
-
-@media(max-width:900px){
-
-#premiumDots{
-
-display:none;
+left:0;
+width:260px;
 
 }
 
